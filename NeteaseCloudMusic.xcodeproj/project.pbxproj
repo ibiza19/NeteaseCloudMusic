@@ -10,6 +10,7 @@
 		A8923B402A6E62EE0057FB41 /* NCMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCMainTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
+		A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A91DD22A7283CA00C59970 /* NCScreen.m */; };
 		A8DE4B322A69252C00A92A93 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B312A69252C00A92A93 /* AppDelegate.m */; };
 		A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B342A69252C00A92A93 /* SceneDelegate.m */; };
 		A8DE4B3D2A69252D00A92A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DE4B3C2A69252D00A92A93 /* Assets.xcassets */; };
@@ -44,6 +45,8 @@
 		A8923B422A6E64F80057FB41 /* NCNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNavigationController.m; sourceTree = "<group>"; };
 		A8923B442A6E671D0057FB41 /* NCDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCDiscoverViewController.h; sourceTree = "<group>"; };
 		A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCDiscoverViewController.m; sourceTree = "<group>"; };
+		A8A91DD12A7283CA00C59970 /* NCScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCScreen.h; sourceTree = "<group>"; };
+		A8A91DD22A7283CA00C59970 /* NCScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCScreen.m; sourceTree = "<group>"; };
 		A8DE4B2D2A69252C00A92A93 /* NeteaseCloudMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NeteaseCloudMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DE4B302A69252C00A92A93 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A8DE4B312A69252C00A92A93 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				A8923B422A6E64F80057FB41 /* NCNavigationController.m */,
 				A8923B442A6E671D0057FB41 /* NCDiscoverViewController.h */,
 				A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */,
+				A8A91DD12A7283CA00C59970 /* NCScreen.h */,
+				A8A91DD22A7283CA00C59970 /* NCScreen.m */,
 			);
 			path = NeteaseCloudMusic;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			files = (
 				A8DE4B322A69252C00A92A93 /* AppDelegate.m in Sources */,
 				A8923B402A6E62EE0057FB41 /* NCMainTabBarController.m in Sources */,
+				A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */,
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
