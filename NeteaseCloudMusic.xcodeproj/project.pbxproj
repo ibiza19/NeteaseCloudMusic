@@ -88,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A8A91DDB2A729FCA00C59970 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A8A91DD12A7283CA00C59970 /* NCScreen.h */,
+				A8A91DD22A7283CA00C59970 /* NCScreen.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A8DE4B242A69252C00A92A93 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +120,7 @@
 		A8DE4B2F2A69252C00A92A93 /* NeteaseCloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				A8A91DDB2A729FCA00C59970 /* Utils */,
 				A8DE4B302A69252C00A92A93 /* AppDelegate.h */,
 				A8DE4B312A69252C00A92A93 /* AppDelegate.m */,
 				A8DE4B332A69252C00A92A93 /* SceneDelegate.h */,
@@ -125,8 +135,6 @@
 				A8923B422A6E64F80057FB41 /* NCNavigationController.m */,
 				A8923B442A6E671D0057FB41 /* NCDiscoverViewController.h */,
 				A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */,
-				A8A91DD12A7283CA00C59970 /* NCScreen.h */,
-				A8A91DD22A7283CA00C59970 /* NCScreen.m */,
 			);
 			path = NeteaseCloudMusic;
 			sourceTree = "<group>";
