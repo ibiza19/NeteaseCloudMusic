@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24AE41C02A83CA17674F2742 /* libPods-NeteaseCloudMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */; };
 		A8923B402A6E62EE0057FB41 /* NCMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCMainTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCMainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCMainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -61,6 +63,8 @@
 		A8DE4B522A69252E00A92A93 /* NeteaseCloudMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseCloudMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DE4B562A69252E00A92A93 /* NeteaseCloudMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseCloudMusicUITests.m; sourceTree = "<group>"; };
 		A8DE4B582A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseCloudMusicUITestsLaunchTests.m; sourceTree = "<group>"; };
+		C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeteaseCloudMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.release.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24AE41C02A83CA17674F2742 /* libPods-NeteaseCloudMusic.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +93,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A526DC5770F13C34BB5F6195 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */,
+				CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +119,8 @@
 				A8DE4B4B2A69252E00A92A93 /* NeteaseCloudMusicTests */,
 				A8DE4B552A69252E00A92A93 /* NeteaseCloudMusicUITests */,
 				A8DE4B2E2A69252C00A92A93 /* Products */,
+				A526DC5770F13C34BB5F6195 /* Pods */,
+				D29C4F71E73BE3C5FFB37CE6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,6 +173,14 @@
 			path = NeteaseCloudMusicUITests;
 			sourceTree = "<group>";
 		};
+		D29C4F71E73BE3C5FFB37CE6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,6 +188,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8DE4B5C2A69252E00A92A93 /* Build configuration list for PBXNativeTarget "NeteaseCloudMusic" */;
 			buildPhases = (
+				F8D1AF8518BC4BBAC4B754F8 /* [CP] Check Pods Manifest.lock */,
 				A8DE4B292A69252C00A92A93 /* Sources */,
 				A8DE4B2A2A69252C00A92A93 /* Frameworks */,
 				A8DE4B2B2A69252C00A92A93 /* Resources */,
@@ -279,6 +305,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F8D1AF8518BC4BBAC4B754F8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NeteaseCloudMusic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8DE4B292A69252C00A92A93 /* Sources */ = {
@@ -451,6 +502,7 @@
 		};
 		A8DE4B5D2A69252E00A92A93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -477,6 +529,7 @@
 		};
 		A8DE4B5E2A69252E00A92A93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

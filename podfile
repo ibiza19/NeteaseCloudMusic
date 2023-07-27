@@ -1,0 +1,7 @@
+platform :ios, '15.5'
+
+target 'NeteaseCloudMusic' do
+
+	pod 'AFNetworking'
+	pod 'SDWebImage'
+end
