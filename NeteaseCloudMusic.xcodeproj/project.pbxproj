@@ -99,7 +99,6 @@
 				8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */,
 				CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -523,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = top.ibiza19.NeteaseCloudMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -550,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = top.ibiza19.NeteaseCloudMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
