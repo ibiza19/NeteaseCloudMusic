@@ -7,6 +7,7 @@
 
 #import "NCBaseViewController.h"
 #import "NCTabBarController.h"
+#import "NCBottomBarConfig.h"
 
 @interface NCBaseViewController ()
 
@@ -26,26 +27,21 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
   
-#warning 这一段的logic
-//    if ([self.tabBarController isKindOfClass:[NCTabBarController class]] && !self.isDelayShowBottomBar) {
-//        NCTabBarController *tabBarController = (NCTabBarController *)self.tabBarController;
-//        [tabBarController updateBottomStyle:[BarConfig bottomBarStyleForViewControllerClass:[self class]]];
-//    }
+    if ([self.tabBarController isKindOfClass:[NCTabBarController class]] && !self.isDelayShowBottomBar) {
+        NCTabBarController *tabBarController = (NCTabBarController *)self.tabBarController;
+        [tabBarController updateBottomStyle:[NCBottomBarConfig bottomBarStyleForViewControllerClass:self.class]];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
   
-#warning 这一段的logic
-    // 此处处理从使用自定义push方式实现present的页面 dismiss 的情况
-//    if ([self.tabBarController isKindOfClass:[NCTabBarController class]] && self.isDelayShowBottomBar) {
-//        NCTabBarController *tabBarController = (NCTabBarController *)self.tabBarController;
-//        [tabBarController updateBottomStyle:[BarConfig bottomBarStyleForViewControllerClass:[self class]]];
-//    }
+    // 此处处理从使用自定义push方式实现present的页面dismiss的情况
+    if ([self.tabBarController isKindOfClass:[NCTabBarController class]] && self.isDelayShowBottomBar) {
+        NCTabBarController *tabBarController = (NCTabBarController *)self.tabBarController;
+        [tabBarController updateBottomStyle:[NCBottomBarConfig bottomBarStyleForViewControllerClass:self.class]];
+    }
 }
 
-#pragma mark - Lazy Load
-
-#warning 懒加载currentPushOperation, 其实也不用，因为只设置了那个属性是不是那个而已
 
 @end

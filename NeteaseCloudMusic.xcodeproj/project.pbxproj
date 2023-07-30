@@ -12,6 +12,11 @@
 		A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075DC2A7500B900A86A5F /* NCMineViewController.m */; };
 		A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */; };
 		A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075E62A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m */; };
+		A81075EB2A7658D000A86A5F /* NCTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075EA2A7658D000A86A5F /* NCTabBar.m */; };
+		A81075EE2A765A9C00A86A5F /* NCTabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075ED2A765A9C00A86A5F /* NCTabBarItem.m */; };
+		A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F02A76991700A86A5F /* NCBottomBarConfig.m */; };
+		A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */; };
+		A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -53,6 +58,16 @@
 		A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNavigationControllerPushAnimatedTransitionBottomToTop.m; sourceTree = "<group>"; };
 		A81075E52A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationControllerPopAnimatedTransitionTopToBottom.h; sourceTree = "<group>"; };
 		A81075E62A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNavigationControllerPopAnimatedTransitionTopToBottom.m; sourceTree = "<group>"; };
+		A81075E92A7658D000A86A5F /* NCTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBar.h; sourceTree = "<group>"; };
+		A81075EA2A7658D000A86A5F /* NCTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBar.m; sourceTree = "<group>"; };
+		A81075EC2A765A9C00A86A5F /* NCTabBarItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarItem.h; sourceTree = "<group>"; };
+		A81075ED2A765A9C00A86A5F /* NCTabBarItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarItem.m; sourceTree = "<group>"; };
+		A81075EF2A76991700A86A5F /* NCBottomBarConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBottomBarConfig.h; sourceTree = "<group>"; };
+		A81075F02A76991700A86A5F /* NCBottomBarConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCBottomBarConfig.m; sourceTree = "<group>"; };
+		A81075F22A769A5F00A86A5F /* NCMusicDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicDetailViewController.h; sourceTree = "<group>"; };
+		A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailViewController.m; sourceTree = "<group>"; };
+		A81075F52A76A01A00A86A5F /* NCMiniPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMiniPlayerView.h; sourceTree = "<group>"; };
+		A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMiniPlayerView.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -117,11 +132,12 @@
 		A81075DA2A74FF9A00A86A5F /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A81075E82A76589600A86A5F /* NCTabBarController */,
 				A81075DE2A760DA100A86A5F /* NCNavigationController */,
-				A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */,
-				A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */,
 				A81075D72A74FF5C00A86A5F /* NCBaseViewController.h */,
 				A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */,
+				A81075EF2A76991700A86A5F /* NCBottomBarConfig.h */,
+				A81075F02A76991700A86A5F /* NCBottomBarConfig.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -137,6 +153,19 @@
 				A8923B422A6E64F80057FB41 /* NCNavigationController.m */,
 			);
 			path = NCNavigationController;
+			sourceTree = "<group>";
+		};
+		A81075E82A76589600A86A5F /* NCTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */,
+				A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */,
+				A81075E92A7658D000A86A5F /* NCTabBar.h */,
+				A81075EA2A7658D000A86A5F /* NCTabBar.m */,
+				A81075EC2A765A9C00A86A5F /* NCTabBarItem.h */,
+				A81075ED2A765A9C00A86A5F /* NCTabBarItem.m */,
+			);
+			path = NCTabBarController;
 			sourceTree = "<group>";
 		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
@@ -187,6 +216,10 @@
 				A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */,
 				A81075DB2A7500B900A86A5F /* NCMineViewController.h */,
 				A81075DC2A7500B900A86A5F /* NCMineViewController.m */,
+				A81075F22A769A5F00A86A5F /* NCMusicDetailViewController.h */,
+				A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */,
+				A81075F52A76A01A00A86A5F /* NCMiniPlayerView.h */,
+				A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */,
 			);
 			path = NeteaseCloudMusic;
 			sourceTree = "<group>";
@@ -373,14 +406,19 @@
 			files = (
 				A8DE4B322A69252C00A92A93 /* AppDelegate.m in Sources */,
 				A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */,
+				A81075EE2A765A9C00A86A5F /* NCTabBarItem.m in Sources */,
+				A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */,
+				A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */,
 				A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */,
 				A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */,
 				A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */,
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
 				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
+				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
+				A81075EB2A7658D000A86A5F /* NCTabBar.m in Sources */,
 				A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

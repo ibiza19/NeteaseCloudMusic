@@ -6,10 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NCTabBar.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NCTabBarController : UITabBarController
+
+- (void)updateBottomStyle:(NCTabBarBottomBarStyles)style;
 
 @end
 
