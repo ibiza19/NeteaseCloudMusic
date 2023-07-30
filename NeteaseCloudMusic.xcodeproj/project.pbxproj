@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		24AE41C02A83CA17674F2742 /* libPods-NeteaseCloudMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */; };
-		A8923B402A6E62EE0057FB41 /* NCMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCMainTabBarController.m */; };
+		A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */; };
+		A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075DC2A7500B900A86A5F /* NCMineViewController.m */; };
+		A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */; };
+		A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075E62A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m */; };
+		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
 		A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = A8A91DD22A7283CA00C59970 /* NCScreen.m */; };
@@ -41,8 +45,16 @@
 
 /* Begin PBXFileReference section */
 		8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
-		A8923B3E2A6E62EE0057FB41 /* NCMainTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMainTabBarController.h; sourceTree = "<group>"; };
-		A8923B3F2A6E62EE0057FB41 /* NCMainTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMainTabBarController.m; sourceTree = "<group>"; };
+		A81075D72A74FF5C00A86A5F /* NCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBaseViewController.h; sourceTree = "<group>"; };
+		A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCBaseViewController.m; sourceTree = "<group>"; };
+		A81075DB2A7500B900A86A5F /* NCMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMineViewController.h; sourceTree = "<group>"; };
+		A81075DC2A7500B900A86A5F /* NCMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMineViewController.m; sourceTree = "<group>"; };
+		A81075DF2A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationControllerPushAnimatedTransitionBottomToTop.h; sourceTree = "<group>"; };
+		A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNavigationControllerPushAnimatedTransitionBottomToTop.m; sourceTree = "<group>"; };
+		A81075E52A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationControllerPopAnimatedTransitionTopToBottom.h; sourceTree = "<group>"; };
+		A81075E62A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNavigationControllerPopAnimatedTransitionTopToBottom.m; sourceTree = "<group>"; };
+		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
+		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
 		A8923B422A6E64F80057FB41 /* NCNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNavigationController.m; sourceTree = "<group>"; };
 		A8923B442A6E671D0057FB41 /* NCDiscoverViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCDiscoverViewController.h; sourceTree = "<group>"; };
@@ -102,6 +114,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A81075DA2A74FF9A00A86A5F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A81075DE2A760DA100A86A5F /* NCNavigationController */,
+				A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */,
+				A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */,
+				A81075D72A74FF5C00A86A5F /* NCBaseViewController.h */,
+				A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A81075DE2A760DA100A86A5F /* NCNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				A81075DF2A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.h */,
+				A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */,
+				A81075E52A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.h */,
+				A81075E62A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m */,
+				A8923B412A6E64F80057FB41 /* NCNavigationController.h */,
+				A8923B422A6E64F80057FB41 /* NCNavigationController.m */,
+			);
+			path = NCNavigationController;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +173,7 @@
 		A8DE4B2F2A69252C00A92A93 /* NeteaseCloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				A81075DA2A74FF9A00A86A5F /* Base */,
 				A8A91DDB2A729FCA00C59970 /* Utils */,
 				A8DE4B302A69252C00A92A93 /* AppDelegate.h */,
 				A8DE4B312A69252C00A92A93 /* AppDelegate.m */,
@@ -145,12 +183,10 @@
 				A8DE4B3E2A69252D00A92A93 /* LaunchScreen.storyboard */,
 				A8DE4B412A69252D00A92A93 /* Info.plist */,
 				A8DE4B422A69252D00A92A93 /* main.m */,
-				A8923B3E2A6E62EE0057FB41 /* NCMainTabBarController.h */,
-				A8923B3F2A6E62EE0057FB41 /* NCMainTabBarController.m */,
-				A8923B412A6E64F80057FB41 /* NCNavigationController.h */,
-				A8923B422A6E64F80057FB41 /* NCNavigationController.m */,
 				A8923B442A6E671D0057FB41 /* NCDiscoverViewController.h */,
 				A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */,
+				A81075DB2A7500B900A86A5F /* NCMineViewController.h */,
+				A81075DC2A7500B900A86A5F /* NCMineViewController.m */,
 			);
 			path = NeteaseCloudMusic;
 			sourceTree = "<group>";
@@ -336,9 +372,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DE4B322A69252C00A92A93 /* AppDelegate.m in Sources */,
-				A8923B402A6E62EE0057FB41 /* NCMainTabBarController.m in Sources */,
+				A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */,
 				A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */,
+				A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */,
+				A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */,
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
+				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
+				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
 				A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */,

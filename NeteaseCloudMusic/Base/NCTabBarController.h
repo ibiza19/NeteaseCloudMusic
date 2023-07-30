@@ -1,5 +1,5 @@
 //
-//  NCMainTabBarController.h
+//  NCTabBarController.h
 //  NeteaseCloudMusic
 //
 //  Created by IBIZA on 7/24/23.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NCMainTabBarController : UITabBarController
+@interface NCTabBarController : UITabBarController
 
 @end
 

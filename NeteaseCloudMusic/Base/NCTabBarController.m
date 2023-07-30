@@ -1,18 +1,18 @@
 //
-//  NCMainTabBarController.m
+//  NCTabBarController.m
 //  NeteaseCloudMusic
 //
 //  Created by IBIZA on 7/24/23.
 //
 
-#import "NCMainTabBarController.h"
+#import "NCTabBarController.h"
 #import "NCNavigationController.h"
 
-@interface NCMainTabBarController ()
+@interface NCTabBarController ()
 
 @end
 
-@implementation NCMainTabBarController
+@implementation NCTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

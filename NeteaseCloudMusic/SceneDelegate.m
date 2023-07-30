@@ -6,7 +6,7 @@
 //
 
 #import "SceneDelegate.h"
-#import "NCMainTabBarController.h"
+#import "NCTabBarController.h"
 
 @interface SceneDelegate ()
 
@@ -18,7 +18,7 @@
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
-    self.window.rootViewController = [[NCMainTabBarController alloc] init];
+    self.window.rootViewController = [[NCTabBarController alloc] init];
     [self.window makeKeyAndVisible];
 }
 
