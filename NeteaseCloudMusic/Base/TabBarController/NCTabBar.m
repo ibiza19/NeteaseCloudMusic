@@ -106,6 +106,14 @@
     })];
 }
 
+- (void)_updateBarItemsWithSelectedIndex:(NSInteger)selectedIndex {
+    for (NSInteger index = 0; index < self.tabBarItems.count; index++) {
+        NCTabBarItem *item = self.tabBarItems[index];
+        NCTabBarItemState state = (selectedIndex == index) ? NCTabBarItemStateSelected : NCTabBarItemStateNormal;
+        [item reloadDataWithState:state];
+    }
+}
+
 #pragma mark - Public Method
 
 - (void)createTabBarItems {
@@ -133,15 +141,7 @@
         item.title = info.title;
     }
     
-    [self updateBarItemsWithSelectedIndex:selectedIndex];
-}
-
-- (void)updateBarItemsWithSelectedIndex:(NSInteger)selectedIndex {
-    for (NSInteger index = 0; index < self.tabBarItems.count; index++) {
-        NCTabBarItem *item = self.tabBarItems[index];
-        NCTabBarItemState state = (selectedIndex == index) ? NCTabBarItemStateSelected : NCTabBarItemStateNormal;
-        [item reloadDataWithState:state];
-    }
+    [self _updateBarItemsWithSelectedIndex:selectedIndex];
 }
 
 #pragma mark - NCTabBarItemDelegate

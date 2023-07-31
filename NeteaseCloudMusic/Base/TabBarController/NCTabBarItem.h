@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, NCTabBarItemState) {
     NCTabBarItemStateSelected
 };
 
-
+/// 自定义的tabBarItem
 @interface NCTabBarItem : UIView
 
 @property (nonatomic, copy, readwrite) NSString *iconName;
@@ -30,6 +30,8 @@ typedef NS_ENUM(NSInteger, NCTabBarItemState) {
 @property (nonatomic, copy, readwrite) NSString *title;
 @property (nonatomic, weak, readwrite) id<NCTabBarItemDelegate> delegate;
 
+/// 刷新tabBarItem
+/// @param state tabBarItem的状态(是否被选中)
 - (void)reloadDataWithState:(NCTabBarItemState)state;
 
 @end

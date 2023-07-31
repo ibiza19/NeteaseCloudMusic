@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// "发现"页面的ViewController
 @interface NCDiscoverViewController : NCBaseViewController
 
 @end

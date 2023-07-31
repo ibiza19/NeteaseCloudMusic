@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// TabBar中迷你音乐播放器的view
 @interface NCMiniPlayerView : UIView
 
 @end

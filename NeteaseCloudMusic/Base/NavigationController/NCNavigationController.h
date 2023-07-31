@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 自定义navigationController
 @interface NCNavigationController : UINavigationController
 
 @end

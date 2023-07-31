@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 点击时从下往上弹出的动画
 @interface NCNavigationControllerPushAnimatedTransitionBottomToTop : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

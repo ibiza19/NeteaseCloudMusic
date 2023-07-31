@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 返回时从上往下的动画
 @interface NCNavigationControllerPopAnimatedTransitionTopToBottom : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

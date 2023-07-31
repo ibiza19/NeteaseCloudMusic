@@ -15,6 +15,7 @@
 @interface NCNavigationController ()<UINavigationControllerDelegate, UIGestureRecognizerDelegate>
 
 @property (nonatomic, strong, readwrite) UIPercentDrivenInteractiveTransition *popInteractiveTransition;
+// 从上往下划的手势
 @property (nonatomic, strong, readwrite) UIPanGestureRecognizer *panGestureRecognizer;
 // 从边缘滑动的手势
 @property (nonatomic, strong, readwrite) UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer;

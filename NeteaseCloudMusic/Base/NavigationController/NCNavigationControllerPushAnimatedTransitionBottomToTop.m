@@ -6,6 +6,7 @@
 //
 
 #import "NCNavigationControllerPushAnimatedTransitionBottomToTop.h"
+#import "NCScreen.h"
 
 @implementation NCNavigationControllerPushAnimatedTransitionBottomToTop
 
@@ -28,7 +29,7 @@
     UIView *containerView = [transitionContext containerView];
     [containerView addSubview:toView];
     
-    toView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    toView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         toView.frame = [UIScreen mainScreen].bounds;

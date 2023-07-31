@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// "我的"页面的ViewController
 @interface NCMineViewController : NCBaseViewController
 
 @end

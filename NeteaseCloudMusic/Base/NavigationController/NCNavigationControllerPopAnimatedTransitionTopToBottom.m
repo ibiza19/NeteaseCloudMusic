@@ -6,6 +6,7 @@
 //
 
 #import "NCNavigationControllerPopAnimatedTransitionTopToBottom.h"
+#import "NCScreen.h"
 
 @implementation NCNavigationControllerPopAnimatedTransitionTopToBottom
 
@@ -31,10 +32,10 @@
     }
     [transitionContext.containerView insertSubview:toView belowSubview:fromView];
     
-    fromView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+    fromView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     
     [UIView animateWithDuration:[self transitionDuration:transitionContext] delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        fromView.frame = CGRectMake(0, [UIScreen mainScreen].bounds.size.height, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height);
+        fromView.frame = CGRectMake(0, SCREEN_HEIGHT, SCREEN_WIDTH, SCREEN_HEIGHT);
     } completion:^(BOOL finished) {
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
     }];

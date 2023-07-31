@@ -14,6 +14,7 @@ typedef NS_ENUM(NSInteger, NCNavigationControllerPushOperations) {
     NCNavigationControllerPushOperationBottomUp,
 };
 
+/// viewController均对他进行实现，与自定义navigationController和tabBarController有关
 @interface NCBaseViewController : UIViewController
 
 // 当前viewController是否要延迟做动画

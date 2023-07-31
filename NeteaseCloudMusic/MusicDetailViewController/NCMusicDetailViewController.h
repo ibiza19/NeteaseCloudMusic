@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 点击miniPlayerView进入的详细的音乐播放界面
 @interface NCMusicDetailViewController : NCBaseViewController
 
 @end

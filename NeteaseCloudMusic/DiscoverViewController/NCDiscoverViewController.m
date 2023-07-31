@@ -6,6 +6,7 @@
 //
 
 #import "NCDiscoverViewController.h"
+#import "NCMusicDetailViewController.h"
 #import "NCScreen.h"
 
 @interface NCDiscoverViewController ()
@@ -26,7 +27,7 @@
 }
 
 - (void)clickButton {
-    NCBaseViewController *controller = [[NCBaseViewController alloc] init];
+    NCMusicDetailViewController *controller = [[NCMusicDetailViewController alloc] init];
     controller.view.backgroundColor = [UIColor systemPinkColor];
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.navigationController pushViewController:controller animated:YES];

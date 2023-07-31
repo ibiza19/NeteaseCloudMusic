@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// tabBarItem的相关信息，使用其来布局tabBarItem
 @interface NCTabBarItemInfo : NSObject
 @property (nonatomic, copy, readwrite) NSString *name;
 @property (nonatomic, copy, readwrite) NSString *selectName;
@@ -28,16 +29,19 @@ typedef NS_ENUM(NSInteger, NCTabBarBottomBarStyles) {
 - (void)tabBar:(NCTabBar *)tabBar didSelectedIndex:(NSInteger)index;
 @end
 
-
+/// 自定义的tabBar
 @interface NCTabBar : UITabBar
 @property (nonatomic, assign, readwrite) NCTabBarBottomBarStyles bottomBarStyle;
 @property (nonatomic, copy, readwrite) NSArray<NCTabBarItemInfo *> *itemsInfo;
 @property (nonatomic, strong, readwrite) UIImage *bgImage;
 @property (nonatomic, weak, readwrite) id<NCTabBarDelegate> NCDelegate;
 
+/// 对tabBarItems进行初始化
 - (void)createTabBarItems;
+
+/// 通过数据加载tabBar
+/// @param selectedIndex 处于selected的item的index
 - (void)reloadData:(NSInteger)selectedIndex;
-- (void)updateBarItemsWithSelectedIndex:(NSInteger)selectedIndex;
 @end
 
 NS_ASSUME_NONNULL_END

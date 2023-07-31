@@ -18,7 +18,6 @@
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
-//        self.layer.cornerRadius = MINI_PLAYVIEW_HEIGHT * 0.5;
         self.layer.masksToBounds = YES;
     }
     return self;
