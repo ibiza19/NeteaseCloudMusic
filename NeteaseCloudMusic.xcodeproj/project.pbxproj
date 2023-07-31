@@ -190,6 +190,33 @@
 			path = DiscoverViewController;
 			sourceTree = "<group>";
 		};
+		A81076032A77B5E900A86A5F /* MusicDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A81075F22A769A5F00A86A5F /* NCMusicDetailViewController.h */,
+				A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */,
+			);
+			path = MusicDetailViewController;
+			sourceTree = "<group>";
+		};
+		A81076042A77B61200A86A5F /* MiniPlayerView */ = {
+			isa = PBXGroup;
+			children = (
+				A81075F52A76A01A00A86A5F /* NCMiniPlayerView.h */,
+				A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */,
+			);
+			path = MiniPlayerView;
+			sourceTree = "<group>";
+		};
+		A81076052A77B62800A86A5F /* MineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A81075DB2A7500B900A86A5F /* NCMineViewController.h */,
+				A81075DC2A7500B900A86A5F /* NCMineViewController.m */,
+			);
+			path = MineViewController;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +253,9 @@
 		A8DE4B2F2A69252C00A92A93 /* NeteaseCloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				A81076052A77B62800A86A5F /* MineViewController */,
+				A81076042A77B61200A86A5F /* MiniPlayerView */,
+				A81076032A77B5E900A86A5F /* MusicDetailViewController */,
 				A81075F92A774FE500A86A5F /* DiscoverViewController */,
 				A81075F82A774FAB00A86A5F /* Supporting Files */,
 				A81075DA2A74FF9A00A86A5F /* Base */,
@@ -234,12 +264,6 @@
 				A8DE4B312A69252C00A92A93 /* AppDelegate.m */,
 				A8DE4B332A69252C00A92A93 /* SceneDelegate.h */,
 				A8DE4B342A69252C00A92A93 /* SceneDelegate.m */,
-				A81075DB2A7500B900A86A5F /* NCMineViewController.h */,
-				A81075DC2A7500B900A86A5F /* NCMineViewController.m */,
-				A81075F22A769A5F00A86A5F /* NCMusicDetailViewController.h */,
-				A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */,
-				A81075F52A76A01A00A86A5F /* NCMiniPlayerView.h */,
-				A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */,
 				A8DE4B412A69252D00A92A93 /* Info.plist */,
 			);
 			path = NeteaseCloudMusic;

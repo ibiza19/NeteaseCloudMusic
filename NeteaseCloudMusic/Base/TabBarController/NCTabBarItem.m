@@ -34,8 +34,8 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat imgW = 30;
-    CGFloat imgH = 30;
+    CGFloat imgW = 32;
+    CGFloat imgH = 27;
     CGFloat imgX = (self.frame.size.width - imgW) / 2;
     CGFloat imgY = 5;
     self.swappableImageView.frame = CGRectMake(imgX, imgY, imgW, imgH);
@@ -72,10 +72,12 @@
     self.titleLabel.text = self.title;
     if (state == NCTabBarItemStateNormal) {
         self.titleLabel.textColor = self.titleColor;
-        self.swappableImageView.image = [UIImage imageNamed:self.iconName];
+        self.swappableImageView.image = [UIImage systemImageNamed:self.iconName];
+        self.swappableImageView.tintColor = self.titleColor;
     } else if (state == NCTabBarItemStateSelected) {
         self.titleLabel.textColor = self.titleSelectedColor;
-        self.swappableImageView.image = [UIImage imageNamed:self.iconSelectedName];
+        self.swappableImageView.image = [UIImage systemImageNamed:self.iconSelectedName];
+        self.swappableImageView.tintColor = self.titleSelectedColor;
     }
 }
 

@@ -6,7 +6,7 @@
 //
 
 #import "NCMiniPlayerView.h"
-#import "Utils/NCScreen.h"
+#import "NCScreen.h"
 
 @interface NCMiniPlayerView ()
 

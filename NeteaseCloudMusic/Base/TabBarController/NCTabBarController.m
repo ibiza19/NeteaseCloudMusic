@@ -29,7 +29,7 @@
     NSArray *classNameArray = @[@"NCDiscoverViewController",
                                 @"NCMineViewController"];
     NSArray *titleArray = @[@"发现", @"我的"];
-    NSArray *imageNameArray = @[@"discover", @"mine"];
+    NSArray *imageNameArray = @[@"music.note.house", @"person"];
     
     self.tabBarBgImage = [UIImage imageNamed:@"minibar_bg"];
     
@@ -37,7 +37,7 @@
     for (int i = 0; i < imageNameArray.count; i++) {
         NCTabBarItemInfo *info = [[NCTabBarItemInfo alloc] init];
         info.name = imageNameArray[i];
-        info.selectName = [NSString stringWithFormat:@"%@_selected", imageNameArray[i]];
+        info.selectName = [NSString stringWithFormat:@"%@.fill", imageNameArray[i]];
         info.color = kTabBarItemColor;
         info.selectColor = kTabBarItemSelectColor;
         info.title = titleArray[i];
