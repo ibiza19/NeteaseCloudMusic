@@ -37,11 +37,11 @@
     CGFloat imgW = 30;
     CGFloat imgH = 30;
     CGFloat imgX = (self.frame.size.width - imgW) / 2;
-    CGFloat imgY = 0;
+    CGFloat imgY = 5;
     self.swappableImageView.frame = CGRectMake(imgX, imgY, imgW, imgH);
     
     CGFloat titleX = 0;
-    CGFloat titleY = CGRectGetMaxY(self.swappableImageView.frame) + 1;
+    CGFloat titleY = CGRectGetMaxY(self.swappableImageView.frame) - 4;
     CGFloat titleW = self.frame.size.width;
     CGFloat titleH = 18;
     self.titleLabel.frame = CGRectMake(titleX, titleY, titleW, titleH);
@@ -55,7 +55,7 @@
     
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.textAlignment = NSTextAlignmentCenter;
-    _titleLabel.font = [UIFont systemFontOfSize:10];
+    _titleLabel.font = [UIFont boldSystemFontOfSize:10];
     _titleLabel.numberOfLines = 0;
     [self addSubview:_titleLabel];
 }

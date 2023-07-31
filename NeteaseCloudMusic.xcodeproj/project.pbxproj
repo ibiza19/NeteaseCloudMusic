@@ -17,6 +17,7 @@
 		A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F02A76991700A86A5F /* NCBottomBarConfig.m */; };
 		A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */; };
 		A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */; };
+		A81076022A77A48200A86A5F /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A81076012A77A48200A86A5F /* NCColor.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -68,6 +69,8 @@
 		A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailViewController.m; sourceTree = "<group>"; };
 		A81075F52A76A01A00A86A5F /* NCMiniPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMiniPlayerView.h; sourceTree = "<group>"; };
 		A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMiniPlayerView.m; sourceTree = "<group>"; };
+		A81076002A77A48100A86A5F /* NCColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
+		A81076012A77A48200A86A5F /* NCColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 			children = (
 				A8A91DD12A7283CA00C59970 /* NCScreen.h */,
 				A8A91DD22A7283CA00C59970 /* NCScreen.m */,
+				A81076002A77A48100A86A5F /* NCColor.h */,
+				A81076012A77A48200A86A5F /* NCColor.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
 				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
+				A81076022A77A48200A86A5F /* NCColor.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
 				A81075EB2A7658D000A86A5F /* NCTabBar.m in Sources */,
 				A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */,

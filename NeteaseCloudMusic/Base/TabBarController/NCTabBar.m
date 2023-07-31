@@ -20,6 +20,7 @@
 @property (nonatomic, strong, readwrite) NCMiniPlayerView *miniPlayerView; // mini播放条
 @property (nonatomic, strong, readwrite) UIView *itemsContainer; // 装item的容器
 @property (nonatomic, copy, readwrite) NSArray<NCTabBarItem *> *tabBarItems;
+@property (nonatomic, strong, readwrite) UIView *horizontalLine;  // mini播放条和底部按钮的分割线
 
 @end
 
@@ -62,8 +63,6 @@
     frame.size.height = self.bounds.size.height - exHeight;
     self.backgroundImageView.frame = frame;
     
-//    CGFloat viewW = SCREEN_WIDTH - 40.0;
-//    CGFloat viewX = (SCREEN_WIDTH - viewW) / 2.0;
     self.miniPlayerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, MINI_PLAYVIEW_HEIGHT);
 
 
@@ -75,9 +74,12 @@
         self.tabBarItems[index].frame = CGRectMake(itemW * index, 0, itemW, TABBAR_HEIGHT);
     }
     
-//    if (self.bottomBarStyle == NCTabBarBottomBarStyleMiniPlayViewOnly) {
-//        self.backgroundImageView.alpha = 0;
-//    }
+    if (self.bottomBarStyle == NCTabBarBottomBarStyleAll) {
+        self.horizontalLine.frame = CGRectMake(0, layoutY, SCREEN_WIDTH, 0.18);
+        [self addSubview:self.horizontalLine];
+    } else {
+        [self.horizontalLine removeFromSuperview];
+    }
 }
 
 #pragma mark - Private Method
@@ -97,6 +99,11 @@
         _itemsContainer;
     })];
     
+    [self addSubview:({
+        _horizontalLine = [[UIView alloc] init];
+        _horizontalLine.backgroundColor = [UIColor systemGrayColor];
+        _horizontalLine;
+    })];
 }
 
 #pragma mark - Public Method

@@ -8,6 +8,7 @@
 #import "NCTabBarController.h"
 #import "NCNavigationController.h"
 #import "NCScreen.h"
+#import "NCColor.h"
 
 @interface NCTabBarController () <NCTabBarDelegate>
 
@@ -37,8 +38,8 @@
         NCTabBarItemInfo *info = [[NCTabBarItemInfo alloc] init];
         info.name = imageNameArray[i];
         info.selectName = [NSString stringWithFormat:@"%@_selected", imageNameArray[i]];
-        info.color = [UIColor systemGrayColor];
-        info.selectColor = [UIColor systemGreenColor];
+        info.color = kTabBarItemColor;
+        info.selectColor = kTabBarItemSelectColor;
         info.title = titleArray[i];
         [itemsMutableInfo addObject:info];
     }

@@ -8,6 +8,7 @@
 #import "NCBaseViewController.h"
 #import "NCTabBarController.h"
 #import "NCBottomBarConfig.h"
+#import "NCColor.h"
 
 @interface NCBaseViewController ()
 
@@ -20,7 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = kViewControllerDefaultColor;
     self.extendedLayoutIncludesOpaqueBars = YES;  // 可以扩展到不透明bar底部
 }
 

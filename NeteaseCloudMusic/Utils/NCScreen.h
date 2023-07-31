@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 // 底部迷你播放器的高度
-#define MINI_PLAYVIEW_HEIGHT 44
+#define MINI_PLAYVIEW_HEIGHT (52)
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
 #define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 // 底部高度
 #define HOMEINDICATOR_HEIGHT homeIndicatorHeight()
 #define TABBAR_HEIGHT (49)
-// 下面的整体高度
+// 下面的整体高度(不包括迷你播放器)
 #define BOTTOM_HEIGHT (HOMEINDICATOR_HEIGHT + TABBAR_HEIGHT)
 
 #define UI(x) UIAdapter(x)
