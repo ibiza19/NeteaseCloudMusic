@@ -11,9 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol NCTabBarItemDelegate <NSObject>
-
 - (void)tabBarItem:(NCTabBarItem *)tabBarItem didSelectedIndex:(NSInteger)didSelectedIndex;
-
 @end
 
 

@@ -6,6 +6,7 @@
 //
 
 #import "NCTabBarItem.h"
+#import "NCScreen.h"
 
 @interface NCTabBarItem ()
 
@@ -35,15 +36,15 @@
     
     CGFloat imgW = 30;
     CGFloat imgH = 30;
-    CGFloat imgX = (CGRectGetWidth(self.frame) - imgW) / 2;
+    CGFloat imgX = (self.frame.size.width - imgW) / 2;
     CGFloat imgY = 0;
-    _swappableImageView.frame = CGRectMake(imgX, imgY, imgW, imgH);
+    self.swappableImageView.frame = CGRectMake(imgX, imgY, imgW, imgH);
     
     CGFloat titleX = 0;
-    CGFloat titleY = CGRectGetMaxY(_swappableImageView.frame) + 1;
-    CGFloat titleW = CGRectGetWidth(self.frame);
+    CGFloat titleY = CGRectGetMaxY(self.swappableImageView.frame) + 1;
+    CGFloat titleW = self.frame.size.width;
     CGFloat titleH = 18;
-    _titleLabel.frame = CGRectMake(titleX, titleY, titleW, titleH);
+    self.titleLabel.frame = CGRectMake(titleX, titleY, titleW, titleH);
 }
 
 #pragma mark - Private Method
@@ -68,12 +69,13 @@
 #pragma mark - Public Method
 
 - (void)reloadDataWithState:(NCTabBarItemState)state {
+    self.titleLabel.text = self.title;
     if (state == NCTabBarItemStateNormal) {
-        _titleLabel.textColor = _titleColor;
-        _swappableImageView.image = [UIImage imageNamed:_iconName];
+        self.titleLabel.textColor = self.titleColor;
+        self.swappableImageView.image = [UIImage imageNamed:self.iconName];
     } else if (state == NCTabBarItemStateSelected) {
-        _titleLabel.textColor = _titleSelectedColor;
-        _swappableImageView.image = [UIImage imageNamed:_iconSelectedName];
+        self.titleLabel.textColor = self.titleSelectedColor;
+        self.swappableImageView.image = [UIImage imageNamed:self.iconSelectedName];
     }
 }
 

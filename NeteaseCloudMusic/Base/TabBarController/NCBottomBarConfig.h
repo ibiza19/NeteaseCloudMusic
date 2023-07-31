@@ -5,7 +5,7 @@
 //  Created by IBIZA on 7/30/23.
 //
 
-#import "NCTabBarController/NCTabBar.h"
+#import "NCTabBar.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

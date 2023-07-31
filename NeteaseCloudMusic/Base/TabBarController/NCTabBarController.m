@@ -9,38 +9,57 @@
 #import "NCNavigationController.h"
 #import "NCScreen.h"
 
-@interface NCTabBarController ()
+@interface NCTabBarController () <NCTabBarDelegate>
 
-//@property (nonatomic, strong, readwrite)
+@property (nonatomic, strong, readwrite) NCTabBar *rootTabBar;  // 代替原来的tabBar
 @property (nonatomic, assign, readwrite) NCTabBarBottomBarStyles bottomBarStyle;
+@property (nonatomic, strong, readwrite) UIImage *tabBarBgImage;
+@property (nonatomic, copy, readwrite) NSArray<NCTabBarItemInfo *> *itemsInfo;
 
 @end
 
 @implementation NCTabBarController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setValue:[[NCTabBar alloc] init] forKey:@"tabBar"];
-
     NSArray *classNameArray = @[@"NCDiscoverViewController",
                                 @"NCMineViewController"];
     NSArray *titleArray = @[@"发现", @"我的"];
     NSArray *imageNameArray = @[@"discover", @"mine"];
+    
+    self.tabBarBgImage = [UIImage imageNamed:@"minibar_bg"];
+    
+    NSMutableArray<NCTabBarItemInfo *> *itemsMutableInfo = @[].mutableCopy;
+    for (int i = 0; i < imageNameArray.count; i++) {
+        NCTabBarItemInfo *info = [[NCTabBarItemInfo alloc] init];
+        info.name = imageNameArray[i];
+        info.selectName = [NSString stringWithFormat:@"%@_selected", imageNameArray[i]];
+        info.color = [UIColor systemGrayColor];
+        info.selectColor = [UIColor systemGreenColor];
+        info.title = titleArray[i];
+        [itemsMutableInfo addObject:info];
+    }
+    self.itemsInfo = itemsMutableInfo.copy;
+    
+    self.rootTabBar = [[NCTabBar alloc] init];
+    self.rootTabBar.NCDelegate = self;
+    self.rootTabBar.itemsInfo = self.itemsInfo;
+    self.rootTabBar.bgImage = self.tabBarBgImage;
+    [self.rootTabBar createTabBarItems];
+    [self setValue:self.rootTabBar forKey:@"tabBar"];
+
+    
     NSMutableArray *navigationControllers = @[].mutableCopy;
     for (int i = 0; i < classNameArray.count; i++) {
         UIViewController *viewController = [[NSClassFromString(classNameArray[i]) alloc] init];
         NCNavigationController *navigationController = [[NCNavigationController alloc] initWithRootViewController:viewController];
         [navigationControllers addObject:navigationController];
-        NSString *imageString = imageNameArray[i];
-        NSString *imageSelectedString = [NSString stringWithFormat:@"%@_selected", imageString];
-        navigationController.tabBarItem.image = [UIImage imageNamed:imageString];
-        navigationController.tabBarItem.selectedImage = [UIImage imageNamed:imageSelectedString];
-        navigationController.tabBarItem.title = titleArray[i];
-        
     }
     self.viewControllers = navigationControllers.copy;
-//    self.tabBar.tintColor = kNetEaseRedColor;
+    [self _updateRootTabBarInfos];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -62,6 +81,8 @@
     self.tabBar.frame = CGRectMake(0, tabBarY, SCREEN_WIDTH, TABBAR_HEIGHT + MINI_PLAYVIEW_HEIGHT + HOMEINDICATOR_HEIGHT);
 }
 
+#pragma mark - Public Method
+
 - (void)updateBottomStyle:(NCTabBarBottomBarStyles)style {
     [self.view layoutIfNeeded];
     self.bottomBarStyle = style;
@@ -72,5 +93,18 @@
     } completion:nil];
 }
 
+#pragma mark - Private Method
+
+- (void)_updateRootTabBarInfos {
+    self.rootTabBar.itemsInfo = self.itemsInfo;
+    self.rootTabBar.bgImage = self.tabBarBgImage;
+    [self.rootTabBar reloadData:self.selectedIndex];
+}
+
+#pragma mark - NCTabBarDelegate
+- (void)tabBar:(NCTabBar *)tabBar didSelectedIndex:(NSInteger)index {
+    self.selectedIndex = index;
+    [self.rootTabBar reloadData:self.selectedIndex];
+}
 
 @end

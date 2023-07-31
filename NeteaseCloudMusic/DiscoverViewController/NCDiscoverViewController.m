@@ -27,7 +27,6 @@
 
 - (void)clickButton {
     NCBaseViewController *controller = [[NCBaseViewController alloc] init];
-//    controller.currentPushOperation = NCNavigationControllerPushOperationBottomUp;
     controller.view.backgroundColor = [UIColor systemPinkColor];
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.navigationController pushViewController:controller animated:YES];
