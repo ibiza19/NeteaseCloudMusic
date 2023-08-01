@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-// 底部迷你播放器的高度
+// 底部迷你播放器的高度, 可更改此属性调整迷你播放器的高度
 #define MINI_PLAYVIEW_HEIGHT (52)
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
@@ -24,6 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // 底部高度
 #define HOMEINDICATOR_HEIGHT homeIndicatorHeight()
+// 底部tabBar的高度, 可更改此属性tabBar的高度
 #define TABBAR_HEIGHT (49)
 // 下面的整体高度(不包括迷你播放器)
 #define BOTTOM_HEIGHT (HOMEINDICATOR_HEIGHT + TABBAR_HEIGHT)
