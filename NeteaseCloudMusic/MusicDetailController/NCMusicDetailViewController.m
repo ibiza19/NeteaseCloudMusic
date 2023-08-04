@@ -37,9 +37,8 @@
     })];
     
     [self.view addSubview:({
-        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect qmui_effectWithBlurRadius:80]];
+        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect qmui_effectWithBlurRadius:57]];
         visualEffectView.frame = self.view.bounds;
-        visualEffectView.qmui_foregroundColor = [UIColorMake(200, 200, 200) colorWithAlphaComponent:.3];
         visualEffectView;
     })];
 }
