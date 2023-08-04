@@ -6,8 +6,11 @@
 //
 
 #import "NCMusicDetailViewController.h"
+#import "QMUIKit/QMUIKit.h"
 
 @interface NCMusicDetailViewController ()
+
+@property (nonatomic, strong, readwrite) UIImageView *backgroundImageView;
 
 @end
 
@@ -17,23 +20,28 @@
     self = [super init];
     if (self) {
         self.currentPushOperation = NCNavigationControllerPushOperationBottomUp;
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     return self;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    
+    [self.view addSubview:({
+        self.backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+        self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
+        self.backgroundImageView.image = [UIImage imageNamed:@"test"];
+        self.backgroundImageView;
+    })];
+    
+    [self.view addSubview:({
+        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect qmui_effectWithBlurRadius:80]];
+        visualEffectView.frame = self.view.bounds;
+        visualEffectView.qmui_foregroundColor = [UIColorMake(200, 200, 200) colorWithAlphaComponent:.3];
+        visualEffectView;
+    })];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

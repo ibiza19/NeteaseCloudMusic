@@ -310,6 +310,7 @@
 				A8DE4B292A69252C00A92A93 /* Sources */,
 				A8DE4B2A2A69252C00A92A93 /* Frameworks */,
 				A8DE4B2B2A69252C00A92A93 /* Resources */,
+				9E64E88FBA8A23321B08449E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,6 +426,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9E64E88FBA8A23321B08449E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F8D1AF8518BC4BBAC4B754F8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

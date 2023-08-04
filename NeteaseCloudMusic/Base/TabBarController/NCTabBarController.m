@@ -109,7 +109,6 @@
 // 推入musicDetailViewController
 - (void)_pushMusicDetailViewController {
     NCMusicDetailViewController *detailViewController = [[NCMusicDetailViewController alloc] init];
-    detailViewController.view.backgroundColor = [UIColor systemPinkColor];
     [((NCNavigationController *)self.selectedViewController) pushViewController:detailViewController animated:YES];
 }
 

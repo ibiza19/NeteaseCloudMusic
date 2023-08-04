@@ -4,4 +4,5 @@ target 'NeteaseCloudMusic' do
 
 	pod 'AFNetworking'
 	pod 'SDWebImage'
+	pod 'QMUIKit'
 end
