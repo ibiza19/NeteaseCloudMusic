@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		24AE41C02A83CA17674F2742 /* libPods-NeteaseCloudMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */; };
+		A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A802586A2A7E75E600778EDC /* NCHttpManager.m */; };
 		A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */; };
 		A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075DC2A7500B900A86A5F /* NCMineViewController.m */; };
 		A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */; };
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		A80258692A7E75E600778EDC /* NCHttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCHttpManager.h; sourceTree = "<group>"; };
+		A802586A2A7E75E600778EDC /* NCHttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCHttpManager.m; sourceTree = "<group>"; };
 		A81075D72A74FF5C00A86A5F /* NCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBaseViewController.h; sourceTree = "<group>"; };
 		A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCBaseViewController.m; sourceTree = "<group>"; };
 		A81075DB2A7500B900A86A5F /* NCMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMineViewController.h; sourceTree = "<group>"; };
@@ -229,6 +232,8 @@
 				A81076012A77A48200A86A5F /* NCColor.m */,
 				A86D5C142A7A8CB700BCBE9B /* NCNotification.h */,
 				A86D5C152A7A8CB700BCBE9B /* NCNotification.m */,
+				A80258692A7E75E600778EDC /* NCHttpManager.h */,
+				A802586A2A7E75E600778EDC /* NCHttpManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -484,6 +489,7 @@
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
 				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
+				A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */,
 				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
 				A81076022A77A48200A86A5F /* NCColor.m in Sources */,
