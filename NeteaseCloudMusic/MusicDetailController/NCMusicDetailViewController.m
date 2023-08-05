@@ -7,6 +7,7 @@
 
 #import "NCMusicDetailViewController.h"
 #import "QMUIKit/QMUIKit.h"
+#import "NCScreen.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -15,6 +16,8 @@
 @end
 
 @implementation NCMusicDetailViewController
+
+#pragma mark - Life Cycle
 
 -(instancetype)init {
     self = [super init];
@@ -28,11 +31,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     [self.view addSubview:({
         self.backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
         self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.backgroundImageView.image = [UIImage imageNamed:@"test"];
+        self.backgroundImageView.image = [UIImage imageNamed:@"test2"];
         self.backgroundImageView;
     })];
     
@@ -41,6 +43,21 @@
         visualEffectView.frame = self.view.bounds;
         visualEffectView;
     })];
+    
+    [self.view addSubview:({
+        UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, STATUSBAR_HEIGHT, 60, 60)];
+        [backButton addTarget:self action:@selector(_clickBackButton) forControlEvents:UIControlEventTouchUpInside];
+        [backButton setImage:[UIImage imageNamed:@"Navi_dismiss"] forState:UIControlStateNormal];
+        backButton.alpha = 0.8;
+        backButton;
+    })];
+}
+
+#pragma mark - Private Method
+
+- (void)_clickBackButton {
+    [self.navigationController popViewControllerAnimated:YES];
+    NSLog(@"");
 }
 
 @end
