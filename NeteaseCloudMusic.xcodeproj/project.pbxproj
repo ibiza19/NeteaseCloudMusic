@@ -34,6 +34,7 @@
 		A8DE4B4D2A69252E00A92A93 /* NeteaseCloudMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B4C2A69252E00A92A93 /* NeteaseCloudMusicTests.m */; };
 		A8DE4B572A69252E00A92A93 /* NeteaseCloudMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B562A69252E00A92A93 /* NeteaseCloudMusicUITests.m */; };
 		A8DE4B592A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B582A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m */; };
+		A8F160E52A82346F00308E4E /* NCMusicDetailControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F160E42A82346F00308E4E /* NCMusicDetailControlView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		A8DE4B522A69252E00A92A93 /* NeteaseCloudMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseCloudMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DE4B562A69252E00A92A93 /* NeteaseCloudMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseCloudMusicUITests.m; sourceTree = "<group>"; };
 		A8DE4B582A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseCloudMusicUITestsLaunchTests.m; sourceTree = "<group>"; };
+		A8F160E32A82346F00308E4E /* NCMusicDetailControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicDetailControlView.h; sourceTree = "<group>"; };
+		A8F160E42A82346F00308E4E /* NCMusicDetailControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailControlView.m; sourceTree = "<group>"; };
 		C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeteaseCloudMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.release.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -151,6 +154,8 @@
 				A801F4A92A808C4B003D156A /* NCMusicDetailBackgroundImageView.m */,
 				A801F4AB2A809753003D156A /* NCMusicDetailTurntableView.h */,
 				A801F4AC2A809753003D156A /* NCMusicDetailTurntableView.m */,
+				A8F160E32A82346F00308E4E /* NCMusicDetailControlView.h */,
+				A8F160E42A82346F00308E4E /* NCMusicDetailControlView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,6 +512,7 @@
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
 				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
 				A801F4AD2A809753003D156A /* NCMusicDetailTurntableView.m in Sources */,
+				A8F160E52A82346F00308E4E /* NCMusicDetailControlView.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
 				A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */,
 				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,

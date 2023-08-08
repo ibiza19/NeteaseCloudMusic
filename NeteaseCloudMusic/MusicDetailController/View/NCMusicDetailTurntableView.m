@@ -21,7 +21,7 @@
     if (self) {
         
         [self addSubview:({
-            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 310, 310)];
+            UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 315, 315)];
             backView.backgroundColor = [UIColor whiteColor];
             backView.center = CGPointMake(self.frame.size.width / 2, 235);
             backView.alpha = 0.05;

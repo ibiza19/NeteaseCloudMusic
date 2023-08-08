@@ -10,6 +10,7 @@
 #import "NCColor.h"
 #import "NCMusicDetailBackgroundImageView.h"
 #import "NCMusicDetailTurntableView.h"
+#import "NCMusicDetailControlView.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -17,6 +18,7 @@
 @property (nonatomic, strong, readwrite) UILabel *titleLabel;
 @property (nonatomic, strong, readwrite) UILabel *singerNameLabel;
 @property (nonatomic, strong, readwrite) NCMusicDetailTurntableView *turntableView;
+@property (nonatomic, strong, readwrite) NCMusicDetailControlView *controlView;
 
 @end
 
@@ -67,8 +69,13 @@
     })];
     
     [self.view addSubview:({
-        self.turntableView = [[NCMusicDetailTurntableView alloc] initWithFrame:CGRectMake(0, self.singerNameLabel.frame.origin.y + self.singerNameLabel.frame.size.height + 20, SCREEN_WIDTH, 390)];
+        self.turntableView = [[NCMusicDetailTurntableView alloc] initWithFrame:CGRectMake(0, self.singerNameLabel.frame.origin.y + self.singerNameLabel.frame.size.height + UI(18), SCREEN_WIDTH, 390)];
         self.turntableView;
+    })];
+    
+    [self.view addSubview:({
+        self.controlView = [[NCMusicDetailControlView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - HOMEINDICATOR_HEIGHT - 87, SCREEN_WIDTH, 80)];
+        self.controlView;
     })];
 }
 
