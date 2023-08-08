@@ -6,16 +6,17 @@
 //
 
 #import "NCMusicDetailViewController.h"
-#import "QMUIKit/QMUIKit.h"
 #import "NCScreen.h"
 #import "NCColor.h"
+#import "NCMusicDetailBackgroundImageView.h"
+#import "NCMusicDetailTurntableView.h"
 
 @interface NCMusicDetailViewController ()
 
-@property (nonatomic, strong, readwrite) UIImageView *backgroundImageView;
+@property (nonatomic, strong, readwrite) NCMusicDetailBackgroundImageView *backgroundImageView;
 @property (nonatomic, strong, readwrite) UILabel *titleLabel;
 @property (nonatomic, strong, readwrite) UILabel *singerNameLabel;
-
+@property (nonatomic, strong, readwrite) NCMusicDetailTurntableView *turntableView;
 
 @end
 
@@ -36,16 +37,8 @@
     [super viewDidLoad];
     
     [self.view addSubview:({
-        self.backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-        self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
-        self.backgroundImageView.image = [UIImage imageNamed:@"test"];
+        self.backgroundImageView = [[NCMusicDetailBackgroundImageView alloc] initWithFrame:self.view.bounds];
         self.backgroundImageView;
-    })];
-    
-    [self.view addSubview:({
-        UIVisualEffectView *visualEffectView = [[UIVisualEffectView alloc] initWithEffect:[UIBlurEffect qmui_effectWithBlurRadius:57]];
-        visualEffectView.frame = self.view.bounds;
-        visualEffectView;
     })];
     
     [self.view addSubview:({
@@ -72,13 +65,17 @@
         self.singerNameLabel.text = @"陶喆";
         self.singerNameLabel;
     })];
+    
+    [self.view addSubview:({
+        self.turntableView = [[NCMusicDetailTurntableView alloc] initWithFrame:CGRectMake(0, self.singerNameLabel.frame.origin.y + self.singerNameLabel.frame.size.height + 20, SCREEN_WIDTH, 390)];
+        self.turntableView;
+    })];
 }
 
-#pragma mark - Private Methodq
+#pragma mark - Private Method
 
 - (void)_clickBackButton {
     [self.navigationController popViewControllerAnimated:YES];
-    NSLog(@"");
 }
 
 @end
