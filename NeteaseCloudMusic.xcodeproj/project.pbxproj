@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		24AE41C02A83CA17674F2742 /* libPods-NeteaseCloudMusic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */; };
+		A801F4AA2A808C4B003D156A /* NCMusicDetailBackgroundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = A801F4A92A808C4B003D156A /* NCMusicDetailBackgroundImageView.m */; };
+		A801F4AD2A809753003D156A /* NCMusicDetailTurntableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A801F4AC2A809753003D156A /* NCMusicDetailTurntableView.m */; };
+		A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A802586A2A7E75E600778EDC /* NCHttpManager.m */; };
 		A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */; };
 		A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075DC2A7500B900A86A5F /* NCMineViewController.m */; };
 		A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075E02A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m */; };
@@ -18,6 +21,7 @@
 		A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */; };
 		A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */; };
 		A81076022A77A48200A86A5F /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A81076012A77A48200A86A5F /* NCColor.m */; };
+		A86D5C162A7A8CB700BCBE9B /* NCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A86D5C152A7A8CB700BCBE9B /* NCNotification.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -30,6 +34,8 @@
 		A8DE4B4D2A69252E00A92A93 /* NeteaseCloudMusicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B4C2A69252E00A92A93 /* NeteaseCloudMusicTests.m */; };
 		A8DE4B572A69252E00A92A93 /* NeteaseCloudMusicUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B562A69252E00A92A93 /* NeteaseCloudMusicUITests.m */; };
 		A8DE4B592A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8DE4B582A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m */; };
+		A8F160E52A82346F00308E4E /* NCMusicDetailControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F160E42A82346F00308E4E /* NCMusicDetailControlView.m */; };
+		A8F160E82A83297200308E4E /* NCMusicDetailProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8F160E72A83297200308E4E /* NCMusicDetailProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 
 /* Begin PBXFileReference section */
 		8607B8D77FCEAEA730E1AFC0 /* Pods-NeteaseCloudMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.debug.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		A801F4A82A808C4B003D156A /* NCMusicDetailBackgroundImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicDetailBackgroundImageView.h; sourceTree = "<group>"; };
+		A801F4A92A808C4B003D156A /* NCMusicDetailBackgroundImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailBackgroundImageView.m; sourceTree = "<group>"; };
+		A801F4AB2A809753003D156A /* NCMusicDetailTurntableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicDetailTurntableView.h; sourceTree = "<group>"; };
+		A801F4AC2A809753003D156A /* NCMusicDetailTurntableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailTurntableView.m; sourceTree = "<group>"; };
+		A80258692A7E75E600778EDC /* NCHttpManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCHttpManager.h; sourceTree = "<group>"; };
+		A802586A2A7E75E600778EDC /* NCHttpManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCHttpManager.m; sourceTree = "<group>"; };
 		A81075D72A74FF5C00A86A5F /* NCBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBaseViewController.h; sourceTree = "<group>"; };
 		A81075D82A74FF5C00A86A5F /* NCBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCBaseViewController.m; sourceTree = "<group>"; };
 		A81075DB2A7500B900A86A5F /* NCMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMineViewController.h; sourceTree = "<group>"; };
@@ -71,6 +83,8 @@
 		A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMiniPlayerView.m; sourceTree = "<group>"; };
 		A81076002A77A48100A86A5F /* NCColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
 		A81076012A77A48200A86A5F /* NCColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
+		A86D5C142A7A8CB700BCBE9B /* NCNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNotification.h; sourceTree = "<group>"; };
+		A86D5C152A7A8CB700BCBE9B /* NCNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNotification.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -93,6 +107,10 @@
 		A8DE4B522A69252E00A92A93 /* NeteaseCloudMusicUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeteaseCloudMusicUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DE4B562A69252E00A92A93 /* NeteaseCloudMusicUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseCloudMusicUITests.m; sourceTree = "<group>"; };
 		A8DE4B582A69252E00A92A93 /* NeteaseCloudMusicUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeteaseCloudMusicUITestsLaunchTests.m; sourceTree = "<group>"; };
+		A8F160E32A82346F00308E4E /* NCMusicDetailControlView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicDetailControlView.h; sourceTree = "<group>"; };
+		A8F160E42A82346F00308E4E /* NCMusicDetailControlView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailControlView.m; sourceTree = "<group>"; };
+		A8F160E62A83297200308E4E /* NCMusicDetailProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicDetailProgressView.h; sourceTree = "<group>"; };
+		A8F160E72A83297200308E4E /* NCMusicDetailProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicDetailProgressView.m; sourceTree = "<group>"; };
 		C1DC17F531280003F07A415A /* libPods-NeteaseCloudMusic.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NeteaseCloudMusic.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NeteaseCloudMusic.release.xcconfig"; path = "Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +148,21 @@
 				CCD6D31CB56A354FB4D87F3C /* Pods-NeteaseCloudMusic.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A801F4A72A808BEF003D156A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A801F4A82A808C4B003D156A /* NCMusicDetailBackgroundImageView.h */,
+				A801F4A92A808C4B003D156A /* NCMusicDetailBackgroundImageView.m */,
+				A801F4AB2A809753003D156A /* NCMusicDetailTurntableView.h */,
+				A801F4AC2A809753003D156A /* NCMusicDetailTurntableView.m */,
+				A8F160E32A82346F00308E4E /* NCMusicDetailControlView.h */,
+				A8F160E42A82346F00308E4E /* NCMusicDetailControlView.m */,
+				A8F160E62A83297200308E4E /* NCMusicDetailProgressView.h */,
+				A8F160E72A83297200308E4E /* NCMusicDetailProgressView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A81075DA2A74FF9A00A86A5F /* Base */ = {
@@ -181,22 +214,23 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A81075F92A774FE500A86A5F /* DiscoverViewController */ = {
+		A81075F92A774FE500A86A5F /* DiscoverController */ = {
 			isa = PBXGroup;
 			children = (
 				A8923B442A6E671D0057FB41 /* NCDiscoverViewController.h */,
 				A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */,
 			);
-			path = DiscoverViewController;
+			path = DiscoverController;
 			sourceTree = "<group>";
 		};
-		A81076032A77B5E900A86A5F /* MusicDetailViewController */ = {
+		A81076032A77B5E900A86A5F /* MusicDetailController */ = {
 			isa = PBXGroup;
 			children = (
+				A801F4A72A808BEF003D156A /* View */,
 				A81075F22A769A5F00A86A5F /* NCMusicDetailViewController.h */,
 				A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */,
 			);
-			path = MusicDetailViewController;
+			path = MusicDetailController;
 			sourceTree = "<group>";
 		};
 		A81076042A77B61200A86A5F /* MiniPlayerView */ = {
@@ -208,13 +242,13 @@
 			path = MiniPlayerView;
 			sourceTree = "<group>";
 		};
-		A81076052A77B62800A86A5F /* MineViewController */ = {
+		A81076052A77B62800A86A5F /* MineController */ = {
 			isa = PBXGroup;
 			children = (
 				A81075DB2A7500B900A86A5F /* NCMineViewController.h */,
 				A81075DC2A7500B900A86A5F /* NCMineViewController.m */,
 			);
-			path = MineViewController;
+			path = MineController;
 			sourceTree = "<group>";
 		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
@@ -224,6 +258,10 @@
 				A8A91DD22A7283CA00C59970 /* NCScreen.m */,
 				A81076002A77A48100A86A5F /* NCColor.h */,
 				A81076012A77A48200A86A5F /* NCColor.m */,
+				A86D5C142A7A8CB700BCBE9B /* NCNotification.h */,
+				A86D5C152A7A8CB700BCBE9B /* NCNotification.m */,
+				A80258692A7E75E600778EDC /* NCHttpManager.h */,
+				A802586A2A7E75E600778EDC /* NCHttpManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -253,10 +291,10 @@
 		A8DE4B2F2A69252C00A92A93 /* NeteaseCloudMusic */ = {
 			isa = PBXGroup;
 			children = (
-				A81076052A77B62800A86A5F /* MineViewController */,
+				A81076052A77B62800A86A5F /* MineController */,
 				A81076042A77B61200A86A5F /* MiniPlayerView */,
-				A81076032A77B5E900A86A5F /* MusicDetailViewController */,
-				A81075F92A774FE500A86A5F /* DiscoverViewController */,
+				A81076032A77B5E900A86A5F /* MusicDetailController */,
+				A81075F92A774FE500A86A5F /* DiscoverController */,
 				A81075F82A774FAB00A86A5F /* Supporting Files */,
 				A81075DA2A74FF9A00A86A5F /* Base */,
 				A8A91DDB2A729FCA00C59970 /* Utils */,
@@ -305,6 +343,7 @@
 				A8DE4B292A69252C00A92A93 /* Sources */,
 				A8DE4B2A2A69252C00A92A93 /* Frameworks */,
 				A8DE4B2B2A69252C00A92A93 /* Resources */,
+				9E64E88FBA8A23321B08449E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -420,6 +459,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9E64E88FBA8A23321B08449E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NeteaseCloudMusic/Pods-NeteaseCloudMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F8D1AF8518BC4BBAC4B754F8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -450,6 +506,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DE4B322A69252C00A92A93 /* AppDelegate.m in Sources */,
+				A86D5C162A7A8CB700BCBE9B /* NCNotification.m in Sources */,
 				A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */,
 				A81075EE2A765A9C00A86A5F /* NCTabBarItem.m in Sources */,
 				A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */,
@@ -457,12 +514,17 @@
 				A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */,
 				A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */,
 				A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */,
+				A8F160E82A83297200308E4E /* NCMusicDetailProgressView.m in Sources */,
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
 				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
+				A801F4AD2A809753003D156A /* NCMusicDetailTurntableView.m in Sources */,
+				A8F160E52A82346F00308E4E /* NCMusicDetailControlView.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
+				A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */,
 				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
 				A81076022A77A48200A86A5F /* NCColor.m in Sources */,
+				A801F4AA2A808C4B003D156A /* NCMusicDetailBackgroundImageView.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
 				A81075EB2A7658D000A86A5F /* NCTabBar.m in Sources */,
 				A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */,
@@ -629,8 +691,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K85A9R99M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeteaseCloudMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -643,8 +707,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = top.ibiza19.NeteaseCloudMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = top.ibiza19.NeteaseCloudMusic1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -656,8 +721,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K85A9R99M3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NeteaseCloudMusic/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -670,8 +737,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = top.ibiza19.NeteaseCloudMusic;
+				PRODUCT_BUNDLE_IDENTIFIER = top.ibiza19.NeteaseCloudMusic1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

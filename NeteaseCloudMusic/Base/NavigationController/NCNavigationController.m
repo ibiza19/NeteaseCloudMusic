@@ -30,6 +30,7 @@
     self.navigationBar.translucent = NO;
     self.delegate = self;
     self.interactivePopGestureRecognizer.delegate = self;
+    self.navigationBarHidden = YES;
 }
 
 #pragma mark - Lazy Load

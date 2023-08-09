@@ -17,8 +17,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define NCColorRandom           NCColorRGB(arc4random() % 255, arc4random() % 255, arc4random() % 255)
 
+// viewController默认背景色
 #define kViewControllerDefaultColor NCColorRGB(244, 249, 252)
+// tabBarItem默认颜色
 #define kTabBarItemColor NCColorRGB(142, 151, 161)
+// tabBarItem选中颜色
 #define kTabBarItemSelectColor NCColorRGB(250, 52, 87)
 /// 设置view的颜色
 @interface NCColor : NSObject

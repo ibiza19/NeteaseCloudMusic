@@ -9,6 +9,8 @@
 #import "NCNavigationController.h"
 #import "NCScreen.h"
 #import "NCColor.h"
+#import "NCNotification.h"
+#import "NCMusicDetailViewController.h"
 
 @interface NCTabBarController () <NCTabBarDelegate>
 
@@ -61,6 +63,8 @@
     }
     self.viewControllers = navigationControllers.copy;
     [self _updateRootTabBarInfos];
+    
+    [kNotificationCenter addObserver:self selector:@selector(_pushMusicDetailViewController) name:NCMINIPLAYERVIEW_CLICKED_NOTIFICATION object:nil];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -100,6 +104,12 @@
     self.rootTabBar.itemsInfo = self.itemsInfo;
     self.rootTabBar.bgImage = self.tabBarBgImage;
     [self.rootTabBar reloadData:self.selectedIndex];
+}
+
+// 推入musicDetailViewController
+- (void)_pushMusicDetailViewController {
+    NCMusicDetailViewController *detailViewController = [[NCMusicDetailViewController alloc] init];
+    [((NCNavigationController *)self.selectedViewController) pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - NCTabBarDelegate
