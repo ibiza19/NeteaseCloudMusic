@@ -11,6 +11,7 @@
 #import "NCMusicDetailBackgroundImageView.h"
 #import "NCMusicDetailTurntableView.h"
 #import "NCMusicDetailControlView.h"
+#import "NCMusicDetailProgressView.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -19,6 +20,8 @@
 @property (nonatomic, strong, readwrite) UILabel *singerNameLabel;
 @property (nonatomic, strong, readwrite) NCMusicDetailTurntableView *turntableView;
 @property (nonatomic, strong, readwrite) NCMusicDetailControlView *controlView;
+@property (nonatomic, strong, readwrite) NCMusicDetailProgressView *progressView;
+
 
 @end
 
@@ -76,6 +79,12 @@
     [self.view addSubview:({
         self.controlView = [[NCMusicDetailControlView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - HOMEINDICATOR_HEIGHT - 87, SCREEN_WIDTH, 80)];
         self.controlView;
+    })];
+    
+    [self.view addSubview:({
+        self.progressView = [[NCMusicDetailProgressView alloc] initWithFrame:CGRectMake(0, self.controlView.frame.origin.y - 35, SCREEN_WIDTH, 35)];
+//        self.progressView.backgroundColor = [UIColor systemRedColor];
+        self.progressView;
     })];
 }
 

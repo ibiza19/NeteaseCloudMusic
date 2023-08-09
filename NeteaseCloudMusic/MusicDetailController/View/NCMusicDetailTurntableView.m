@@ -38,19 +38,19 @@
         })];
         
         [self addSubview:({
-            self.needleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"play_needle"]];
-            [self.needleView sizeToFit];
-            self.needleView.center = CGPointMake(self.frame.size.width / 2 + 24, self.needleView.frame.size.height / 2);
-            self.needleView;
+            _needleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"play_needle"]];
+            [_needleView sizeToFit];
+            _needleView.center = CGPointMake(self.frame.size.width / 2 + 24, _needleView.frame.size.height / 2);
+            _needleView;
         })];
         
         [self addSubview:({
-            self.albumCoverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 192, 192)];
-            self.albumCoverImageView.center = CGPointMake(self.frame.size.width / 2, 235);
-            self.albumCoverImageView.image = [UIImage imageNamed:@"test"];
-            self.albumCoverImageView.layer.cornerRadius = self.albumCoverImageView.bounds.size.width / 2;
-            self.albumCoverImageView.layer.masksToBounds = YES;
-            self.albumCoverImageView;
+            _albumCoverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 192, 192)];
+            _albumCoverImageView.center = CGPointMake(self.frame.size.width / 2, 235);
+            _albumCoverImageView.image = [UIImage imageNamed:@"test"];
+            _albumCoverImageView.layer.cornerRadius = _albumCoverImageView.bounds.size.width / 2;
+            _albumCoverImageView.layer.masksToBounds = YES;
+            _albumCoverImageView;
         })];
     }
     return self;
