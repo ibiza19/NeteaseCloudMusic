@@ -8,6 +8,8 @@
 #import "NCDiscoverViewController.h"
 #import "NCMusicDetailViewController.h"
 #import "NCScreen.h"
+#import "NCHttpManager.h"
+#import "NCSongDetailInfo.h"
 
 @interface NCDiscoverViewController ()
 
@@ -31,6 +33,13 @@
     controller.view.backgroundColor = [UIColor systemPinkColor];
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.navigationController pushViewController:controller animated:YES];
+    
+    [kHttpManager get:kSongDetail(109083) params:nil successBlock:^(id  _Nonnull responseObject) {
+        NCSongDetailInfo *info = [NCSongDetailInfo yy_modelWithDictionary:responseObject[@"songs"][0]];
+        NSLog(@"");
+    } failureBlock:^(NSError * _Nonnull error) {
+        NSLog(@"");
+    }];
 }
 
 @end

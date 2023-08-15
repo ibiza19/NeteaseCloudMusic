@@ -21,6 +21,7 @@
 		A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */; };
 		A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */; };
 		A81076022A77A48200A86A5F /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A81076012A77A48200A86A5F /* NCColor.m */; };
+		A818926B2A8B6EF200933133 /* NCSongDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A818926A2A8B6EF200933133 /* NCSongDetailInfo.m */; };
 		A86D5C162A7A8CB700BCBE9B /* NCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A86D5C152A7A8CB700BCBE9B /* NCNotification.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
@@ -83,6 +84,8 @@
 		A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMiniPlayerView.m; sourceTree = "<group>"; };
 		A81076002A77A48100A86A5F /* NCColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
 		A81076012A77A48200A86A5F /* NCColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
+		A81892692A8B6EF200933133 /* NCSongDetailInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCSongDetailInfo.h; sourceTree = "<group>"; };
+		A818926A2A8B6EF200933133 /* NCSongDetailInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCSongDetailInfo.m; sourceTree = "<group>"; };
 		A86D5C142A7A8CB700BCBE9B /* NCNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNotification.h; sourceTree = "<group>"; };
 		A86D5C152A7A8CB700BCBE9B /* NCNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNotification.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
@@ -251,6 +254,24 @@
 			path = MineController;
 			sourceTree = "<group>";
 		};
+		A81892672A8A45C100933133 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A80258692A7E75E600778EDC /* NCHttpManager.h */,
+				A802586A2A7E75E600778EDC /* NCHttpManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A81892682A8B6D9B00933133 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A81892692A8B6EF200933133 /* NCSongDetailInfo.h */,
+				A818926A2A8B6EF200933133 /* NCSongDetailInfo.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,8 +281,6 @@
 				A81076012A77A48200A86A5F /* NCColor.m */,
 				A86D5C142A7A8CB700BCBE9B /* NCNotification.h */,
 				A86D5C152A7A8CB700BCBE9B /* NCNotification.m */,
-				A80258692A7E75E600778EDC /* NCHttpManager.h */,
-				A802586A2A7E75E600778EDC /* NCHttpManager.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -291,6 +310,8 @@
 		A8DE4B2F2A69252C00A92A93 /* NeteaseCloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				A81892682A8B6D9B00933133 /* Model */,
+				A81892672A8A45C100933133 /* Manager */,
 				A81076052A77B62800A86A5F /* MineController */,
 				A81076042A77B61200A86A5F /* MiniPlayerView */,
 				A81076032A77B5E900A86A5F /* MusicDetailController */,
@@ -525,6 +546,7 @@
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
 				A81076022A77A48200A86A5F /* NCColor.m in Sources */,
 				A801F4AA2A808C4B003D156A /* NCMusicDetailBackgroundImageView.m in Sources */,
+				A818926B2A8B6EF200933133 /* NCSongDetailInfo.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
 				A81075EB2A7658D000A86A5F /* NCTabBar.m in Sources */,
 				A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */,

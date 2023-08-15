@@ -7,9 +7,11 @@
 
 #import <Foundation/Foundation.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
 #define kHttpManager [NCHttpManager sharedManager]
+
+// API
+// 获取歌手歌曲详情，传入音乐id
+#define kSongDetail(x) [NSString stringWithFormat:@"song/detail?ids=%d", x]
 
 typedef void(^NCHttpManagerFinishSuccessBlock)(id responseObject);
 typedef void(^NCHttpManagerFinishFailureBlock)(NSError *error);
@@ -24,8 +26,9 @@ typedef void(^NCHttpManagerFinishFailureBlock)(NSError *error);
 - (id)copy __attribute__((unavailable("Invalid, use sharedManager instead")));
 - (id)mutableCopy __attribute__((unavailable("Invalid, use sharedManager instead")));
 
-
+- (void)get:(NSString *)api
+     params:(NSDictionary *)params
+successBlock:(NCHttpManagerFinishSuccessBlock)successBlock
+failureBlock:(NCHttpManagerFinishFailureBlock)failureBlock;
 
 @end
-
-NS_ASSUME_NONNULL_END
