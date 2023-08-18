@@ -10,6 +10,8 @@
 #import "NCScreen.h"
 #import "NCHttpManager.h"
 #import "NCSongDetailInfo.h"
+#import <YYModel/YYModel.h>
+#import "NCMusicPlayerManager.h"
 
 @interface NCDiscoverViewController ()
 
@@ -34,8 +36,9 @@
     controller.modalPresentationStyle = UIModalPresentationFullScreen;
     [self.navigationController pushViewController:controller animated:YES];
     
-    [kHttpManager get:kSongDetail(109083) params:nil successBlock:^(id  _Nonnull responseObject) {
+    [kHttpManager get:kSongDetail(@"109083") params:nil successBlock:^(id  _Nonnull responseObject) {
         NCSongDetailInfo *info = [NCSongDetailInfo yy_modelWithDictionary:responseObject[@"songs"][0]];
+//        [kMusicPlayerManager _playMusicWithString:@"1"];
         NSLog(@"");
     } failureBlock:^(NSError * _Nonnull error) {
         NSLog(@"");

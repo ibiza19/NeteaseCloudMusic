@@ -7,26 +7,17 @@
 
 #import "NCSongDetailInfo.h"
 
-@implementation NCSongDetailArInfo
-
-+ (NSDictionary *)modelCustomPropertyMapper {
-    return @{@"ar_id" : @"id"};
-}
-
-@end
-
 @implementation NCSongDetailInfo
 
 + (NSDictionary *)modelCustomPropertyMapper {
     return @{@"song_id" : @"id",
-             @"al_name" : @"al.name",
-             @"picUrl" : @"al.picUrl",
-             @"al_id" : @"al.id",
+             @"album" : @"al",
+             @"artists" : @"ar"
     };
 }
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
-    return @{@"ar" : NCSongDetailArInfo.class};
+    return @{@"artists" : NCArtistInfo.class};
 }
 
 @end

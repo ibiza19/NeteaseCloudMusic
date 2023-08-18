@@ -11,7 +11,7 @@
 
 // API
 // 获取歌手歌曲详情，传入音乐id
-#define kSongDetail(x) [NSString stringWithFormat:@"song/detail?ids=%d", x]
+#define kSongDetail(x) [NSString stringWithFormat:@"song/detail?ids=%@", x]
 
 typedef void(^NCHttpManagerFinishSuccessBlock)(id responseObject);
 typedef void(^NCHttpManagerFinishFailureBlock)(NSError *error);
