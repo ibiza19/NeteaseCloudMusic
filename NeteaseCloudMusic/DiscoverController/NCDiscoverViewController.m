@@ -9,11 +9,15 @@
 #import "NCMusicDetailViewController.h"
 #import "NCScreen.h"
 #import "NCHttpManager.h"
-#import "NCSongDetailInfo.h"
+#import "NCSongInfo.h"
 #import <YYModel/YYModel.h>
 #import "NCMusicPlayerManager.h"
+#import "NCPlayListManager.h"
+#import "NCBlockMacros.h"
 
 @interface NCDiscoverViewController ()
+
+@property (nonatomic, strong) NSArray<NCSongInfo *> *songsInfo;
 
 @end
 
@@ -22,27 +26,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.view addSubview:({
-        UIButton *button = [[UIButton alloc] initWithFrame:UIRectAdapter(100, 100, 100, 100)];
-        button.backgroundColor = [UIColor blueColor];
-        [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
-        button;
-    })];
-}
 
-- (void)clickButton {
-    NCBaseViewController *controller = [[NCBaseViewController alloc] init];
-    controller.view.backgroundColor = [UIColor systemPinkColor];
-    controller.modalPresentationStyle = UIModalPresentationFullScreen;
-    [self.navigationController pushViewController:controller animated:YES];
     
-    [kHttpManager get:kSongDetail(@"109083") params:nil successBlock:^(id  _Nonnull responseObject) {
-        NCSongDetailInfo *info = [NCSongDetailInfo yy_modelWithDictionary:responseObject[@"songs"][0]];
-//        [kMusicPlayerManager _playMusicWithString:@"1"];
+    weakify(self);
+    [kHttpManager get:kSearchSong(@"海阔天空") params:nil successBlock:^(id  _Nonnull responseObject) {
+        strongify(self);
+        NSMutableArray<NCSongInfo *> *songsMutableInfo = @[].mutableCopy;
+        for (NSDictionary *dict in responseObject[@"result"][@"songs"]) {
+            [songsMutableInfo addObject:[NCSongInfo yy_modelWithDictionary:dict]];
+        }
+        self.songsInfo = songsMutableInfo.copy;
+        [self.view addSubview:({
+            UIButton *button = [[UIButton alloc] initWithFrame:UIRectAdapter(100, 100, 100, 100)];
+            button.backgroundColor = [UIColor blueColor];
+            [button addTarget:self action:@selector(clickButton) forControlEvents:UIControlEventTouchUpInside];
+            button;
+        })];
         NSLog(@"");
     } failureBlock:^(NSError * _Nonnull error) {
         NSLog(@"");
     }];
+}
+
+- (void)clickButton {
+    [kPlayListManager reloadPlayListWithSongInfo:self.songsInfo Index:0];
 }
 
 @end

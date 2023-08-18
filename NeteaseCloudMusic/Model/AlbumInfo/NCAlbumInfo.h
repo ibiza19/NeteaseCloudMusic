@@ -9,6 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 歌曲中专辑信息
 @interface NCAlbumInfo : NSObject
 
 @property (nonatomic, copy) NSString *name;

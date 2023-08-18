@@ -12,6 +12,8 @@
 #import "NCMusicDetailTurntableView.h"
 #import "NCMusicDetailControlView.h"
 #import "NCMusicDetailProgressView.h"
+#import "NCNotification.h"
+#import "NCSongDetailInfo.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -29,11 +31,21 @@
 
 #pragma mark - Life Cycle
 
++ (instancetype)sharedInstance {
+    static NCMusicDetailViewController *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[super allocWithZone:NULL] init];
+    });
+    return instance;
+}
+
 -(instancetype)init {
     self = [super init];
     if (self) {
         self.currentPushOperation = NCNavigationControllerPushOperationBottomUp;
         self.view.backgroundColor = [UIColor whiteColor];
+        [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic:) name:NCPLAYMUSIC_NOTIFICATION object:nil];
     }
     return self;
 }
@@ -94,4 +106,9 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-@end
+- (void)_handlePlayMusic:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    NSLog(@"<<<< I'm OK");
+}
+
+@end 
