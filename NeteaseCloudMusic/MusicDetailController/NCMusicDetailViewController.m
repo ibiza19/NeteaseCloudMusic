@@ -14,6 +14,7 @@
 #import "NCMusicDetailProgressView.h"
 #import "NCNotification.h"
 #import "NCSongDetailInfo.h"
+#import "NCSongInfo.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -46,6 +47,7 @@
         self.currentPushOperation = NCNavigationControllerPushOperationBottomUp;
         self.view.backgroundColor = [UIColor whiteColor];
         [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic:) name:NCPLAYMUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handelRefreshLabel:) name:NC_MUSICDETAILVIEW_REFRESHLABEL_NOTIFICATION object:nil];
     }
     return self;
 }
@@ -107,8 +109,26 @@
 }
 
 - (void)_handlePlayMusic:(NSNotification *)notification {
-    NCSongDetailInfo *songDetailInfo = notification.object;
+//    NCSongDetailInfo *songDetailInfo = notification.object;
+//    [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
     NSLog(@"<<<< I'm OK");
 }
 
-@end 
+- (void)_handelRefreshLabel:(NSNotification *)notification {
+    NCSongInfo *songInfo = notification.object;
+    [self _refreshLabelWithTitle:songInfo.name artists:songInfo.artists];
+}
+
+// 刷新顶部的歌曲信息
+- (void)_refreshLabelWithTitle:(NSString *)title artists:(NSArray<NCArtistInfo *> *)artists {
+    self.titleLabel.text = title.copy;
+    NSMutableString *mutableString = [[NSMutableString alloc] init];
+
+    for (int i = 0; i < artists.count - 1; i++) {
+        [mutableString appendFormat:@"%@/", artists[i].name];
+    }
+    [mutableString appendString:artists[artists.count - 1].name];
+    self.singerNameLabel.text = mutableString.copy;
+}
+
+@end

@@ -29,14 +29,12 @@
 #pragma mark - Public Method
 
 - (void)reloadPlayListWithSongInfo:(NSArray<NCSongInfo *> *)songsInfo Index:(NSInteger)index {
-    self.index = index;
+    // 加载歌曲信息
     NSMutableString *mutableString = [[NSMutableString alloc] init];
     for (int i = 0; i < songsInfo.count - 1; i++) {
         [mutableString appendFormat:@"%ld,", songsInfo[i].song_id];
     }
     [mutableString appendFormat:@"%ld", songsInfo[songsInfo.count - 1].song_id];
-    [kNotificationCenter postNotificationName:NCMINIPLAYERVIEW_LET_APPEAR_NOTIFICATION object:nil];
-    
     weakify(self);
     [kHttpManager get:kSongDetail(mutableString.copy) params:nil successBlock:^(id  _Nonnull responseObject) {
         strongify(self);
@@ -45,10 +43,16 @@
             [songsMutableInfo addObject:[NCSongDetailInfo yy_modelWithDictionary:dict]];
         }
         self.playListInfo = songsMutableInfo.copy;
-        [kNotificationCenter postNotificationName:NCPLAYMUSIC_NOTIFICATION object:self.playListInfo[self.index]];
+        [kNotificationCenter postNotificationName:NCPLAYMUSIC_NOTIFICATION object:self.playListInfo[index]];
+        NSLog(@"<<<< 1111");
     } failureBlock:^(NSError * _Nonnull error) {
         NSLog(@"");
     }];
+    
+    // 弹出musicDetailView，发送刷新的通知
+    self.index = index;
+    [kNotificationCenter postNotificationName:NC_MUSICDETAILVIEW_REFRESHLABEL_NOTIFICATION object:songsInfo[index]];
+    [kNotificationCenter postNotificationName:NCMINIPLAYERVIEW_LET_APPEAR_NOTIFICATION object:nil];
 }
 
 @end

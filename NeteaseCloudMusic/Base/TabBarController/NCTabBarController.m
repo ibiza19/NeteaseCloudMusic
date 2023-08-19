@@ -28,6 +28,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 初始化detailViewController
+    [NCMusicDetailViewController sharedInstance];
+    
     NSArray *classNameArray = @[@"NCDiscoverViewController",
                                 @"NCMineViewController"];
     NSArray *titleArray = @[@"发现", @"我的"];

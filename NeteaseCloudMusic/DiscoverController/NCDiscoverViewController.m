@@ -26,10 +26,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
-    
     weakify(self);
-    [kHttpManager get:kSearchSong(@"海阔天空") params:nil successBlock:^(id  _Nonnull responseObject) {
+    [kHttpManager get:kSearchSong(@"好汉歌") params:nil successBlock:^(id  _Nonnull responseObject) {
         strongify(self);
         NSMutableArray<NCSongInfo *> *songsMutableInfo = @[].mutableCopy;
         for (NSDictionary *dict in responseObject[@"result"][@"songs"]) {

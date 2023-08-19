@@ -19,8 +19,11 @@ NS_ASSUME_NONNULL_BEGIN
 // 播放控制
 // 播放下一首歌
 // 播放上一首歌
-// 播放歌曲，对当前歌曲列表刷新后的播放
+
+// 播放歌曲，对当前歌曲列表刷新后的播放，不用刷新label
 #define NCPLAYMUSIC_NOTIFICATION @"NCPlayMusicNotification"
+// 仅刷新label
+#define NC_MUSICDETAILVIEW_REFRESHLABEL_NOTIFICATION @"NCMusicDetailViewRefreshLabelNotification"
 
 
 // 点击mini音乐播放器非按钮部分
