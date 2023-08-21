@@ -48,7 +48,7 @@
         })];
         
         [self addSubview:({
-            _albumCoverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 192, 192)];
+            _albumCoverImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 195, 195)];
             _albumCoverImageView.center = CGPointMake(self.frame.size.width / 2, 235);
             _albumCoverImageView.image = [UIImage imageNamed:@"test"];
             _albumCoverImageView.layer.cornerRadius = _albumCoverImageView.bounds.size.width / 2;

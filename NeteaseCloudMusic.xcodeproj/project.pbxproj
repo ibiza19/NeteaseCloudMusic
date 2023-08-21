@@ -29,6 +29,8 @@
 		A876740A2A8F4DF600BC961C /* NCSongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674092A8F4DF600BC961C /* NCSongInfo.m */; };
 		A876740E2A8F581500BC961C /* NCPlayListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A876740D2A8F581500BC961C /* NCPlayListManager.m */; };
 		A87674112A8F69A700BC961C /* NCBlockMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674102A8F69A700BC961C /* NCBlockMacros.m */; };
+		A87674142A935FBB00BC961C /* NCPlayModeTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */; };
+		A876741B2A937B7200BC961C /* NCListManagerIndexUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -106,6 +108,10 @@
 		A876740D2A8F581500BC961C /* NCPlayListManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCPlayListManager.m; sourceTree = "<group>"; };
 		A876740F2A8F69A700BC961C /* NCBlockMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBlockMacros.h; sourceTree = "<group>"; };
 		A87674102A8F69A700BC961C /* NCBlockMacros.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCBlockMacros.m; sourceTree = "<group>"; };
+		A87674122A935FBB00BC961C /* NCPlayModeTypeEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPlayModeTypeEnum.h; sourceTree = "<group>"; };
+		A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCPlayModeTypeEnum.m; sourceTree = "<group>"; };
+		A87674192A937B7200BC961C /* NCListManagerIndexUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCListManagerIndexUtils.h; sourceTree = "<group>"; };
+		A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCListManagerIndexUtils.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 				A818926D2A8B87FF00933133 /* NCMusicPlayerManager.m */,
 				A876740C2A8F581500BC961C /* NCPlayListManager.h */,
 				A876740D2A8F581500BC961C /* NCPlayListManager.m */,
+				A87674152A93795600BC961C /* Utils */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -332,6 +339,15 @@
 			path = SongInfo;
 			sourceTree = "<group>";
 		};
+		A87674152A93795600BC961C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A87674192A937B7200BC961C /* NCListManagerIndexUtils.h */,
+				A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,6 +359,8 @@
 				A86D5C152A7A8CB700BCBE9B /* NCNotification.m */,
 				A876740F2A8F69A700BC961C /* NCBlockMacros.h */,
 				A87674102A8F69A700BC961C /* NCBlockMacros.m */,
+				A87674122A935FBB00BC961C /* NCPlayModeTypeEnum.h */,
+				A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -595,6 +613,7 @@
 				A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */,
 				A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */,
 				A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */,
+				A87674142A935FBB00BC961C /* NCPlayModeTypeEnum.m in Sources */,
 				A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */,
 				A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */,
 				A8F160E82A83297200308E4E /* NCMusicDetailProgressView.m in Sources */,
@@ -606,6 +625,7 @@
 				A87674112A8F69A700BC961C /* NCBlockMacros.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
 				A876740A2A8F4DF600BC961C /* NCSongInfo.m in Sources */,
+				A876741B2A937B7200BC961C /* NCListManagerIndexUtils.m in Sources */,
 				A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */,
 				A818926E2A8B87FF00933133 /* NCMusicPlayerManager.m in Sources */,
 				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,

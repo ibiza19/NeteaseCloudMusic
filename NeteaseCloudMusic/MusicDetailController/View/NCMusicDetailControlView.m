@@ -8,6 +8,7 @@
 #import "NCMusicDetailControlView.h"
 #import "NCNotification.h"
 #import "NCScreen.h"
+#import "NCPlayModeTypeEnum.h"
 
 @interface NCMusicDetailControlView ()
 
@@ -16,6 +17,7 @@
 @property (nonatomic, strong, readwrite) UIImageView *nextSongButton;
 @property (nonatomic, strong, readwrite) UIImageView *playModeButton;
 @property (nonatomic, strong, readwrite) UIImageView *playListButton;
+@property (nonatomic, assign, readwrite) NCPlayModeType playModeType;
 
 
 @end
@@ -27,9 +29,6 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-#warning 在controller里面实现相关通知逻辑
-//        [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic) name:NC_PLAY_MUSIC_NOTIFICATION object:nil];
-//        [kNotificationCenter addObserver:self selector:@selector(_handlePauseMusic) name:NC_PAUSE_MUSIC_NOTIFICATION object:nil];
         
         CGFloat centerY = frame.size.height / 2;
 
@@ -41,7 +40,8 @@
             _playButton.image = [UIImage systemImageNamed:@"play.circle" withConfiguration:imageSymbolConfig];
             _playButton.tintColor = [UIColor whiteColor];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickPlayButton)];
-            [self addGestureRecognizer:tapGesture];
+            [_playButton addGestureRecognizer:tapGesture];
+            _playButton.userInteractionEnabled = YES;
             _playButton;
         })];
         
@@ -51,7 +51,8 @@
             _previousSongButton.image = [UIImage systemImageNamed:@"backward.end.fill" withConfiguration:imageSymbolConfig];
             _previousSongButton.tintColor = [UIColor whiteColor];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickPreviousSongButton)];
-            [self addGestureRecognizer:tapGesture];
+            [_previousSongButton addGestureRecognizer:tapGesture];
+            _previousSongButton.userInteractionEnabled = YES;
             _previousSongButton;
         })];
         
@@ -61,7 +62,8 @@
             _nextSongButton.image = [UIImage systemImageNamed:@"forward.end.fill" withConfiguration:imageSymbolConfig];
             _nextSongButton.tintColor = [UIColor whiteColor];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickNextSongButton)];
-            [self addGestureRecognizer:tapGesture];
+            [_nextSongButton addGestureRecognizer:tapGesture];
+            _nextSongButton.userInteractionEnabled = YES;
             _nextSongButton;
         })];
         
@@ -69,9 +71,12 @@
             _playModeButton = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 31, 28)];
             _playModeButton.center = CGPointMake(SCREEN_WIDTH / 6, centerY);
             _playModeButton.image = [UIImage systemImageNamed:@"repeat"];
+            _playModeType = NCPlayModeTypeRepeat;
             _playModeButton.tintColor = [UIColor whiteColor];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickPlayModeButton)];
-            [self addGestureRecognizer:tapGesture];
+            [_playModeButton addGestureRecognizer:tapGesture];
+            _playModeButton.backgroundColor = [UIColor redColor];
+            _playModeButton.userInteractionEnabled = YES;
             _playModeButton;
         })];
         
@@ -81,7 +86,8 @@
             _playListButton.image = [UIImage systemImageNamed:@"text.insert"];
             _playListButton.tintColor = [UIColor whiteColor];
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickPlayListButton)];
-            [self addGestureRecognizer:tapGesture];
+            [_playListButton addGestureRecognizer:tapGesture];
+            _playListButton.userInteractionEnabled = YES;
             _playListButton;
         })];
         
@@ -91,30 +97,36 @@
 
 #pragma mark - Private Method
 
-// 开始播放音乐
-- (void)_handlePlayMusic {
-    
-}
-
-// 暂停播放音乐
-- (void)_handlePauseMusic {
-    
-}
-
 - (void)_clickPlayButton {
     
 }
 
 - (void)_clickPreviousSongButton {
-    
+    [kNotificationCenter postNotificationName:NC_CLICK_PREVIOUSSONG_BUTTON object:nil];
 }
 
 - (void)_clickNextSongButton {
-    
+    [kNotificationCenter postNotificationName:NC_CLICK_NEXTSONG_BUTTON object:nil];
 }
 
 - (void)_clickPlayModeButton {
-    
+    switch (self.playModeType) {
+        case NCPlayModeTypeRepeat:
+            self.playModeButton.image = [UIImage systemImageNamed:@"repeat.1"];
+            self.playModeType = NCPlayModeTypeRepeatOne;
+            [kNotificationCenter postNotificationName:NC_PLAYMODE_TO_REPEATONE object:nil];
+            break;
+        case NCPlayModeTypeRepeatOne:
+            self.playModeButton.image = [UIImage systemImageNamed:@"shuffle"];
+            self.playModeType = NCPlayModeTypeShuffle;
+            [kNotificationCenter postNotificationName:NC_PLAYMODE_TO_Shuffle object:nil];
+            break;
+        case NCPlayModeTypeShuffle:
+            self.playModeButton.image = [UIImage systemImageNamed:@"repeat"];
+            self.playModeType = NCPlayModeTypeRepeat;
+            [kNotificationCenter postNotificationName:NC_PLAYMODE_TO_REPEAT object:nil];
+            break;
+    }
 }
 
 - (void)_clickPlayListButton {

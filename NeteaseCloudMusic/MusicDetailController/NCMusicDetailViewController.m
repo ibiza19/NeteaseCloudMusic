@@ -48,6 +48,9 @@
         self.view.backgroundColor = [UIColor whiteColor];
         [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic:) name:NCPLAYMUSIC_NOTIFICATION object:nil];
         [kNotificationCenter addObserver:self selector:@selector(_handelRefreshLabel:) name:NC_MUSICDETAILVIEW_REFRESHLABEL_NOTIFICATION object:nil];
+        
+        [kNotificationCenter addObserver:self selector:@selector(_handelPlayNextSong:) name:NC_PLAY_NEXTSONG object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handelPlayPreviousSong:) name:NC_PLAY_PREVIOUSSONG object:nil];
     }
     return self;
 }
@@ -109,16 +112,26 @@
 
 - (void)_handlePlayMusic:(NSNotification *)notification {
     NCSongDetailInfo *songDetailInfo = notification.object;
-    NSString *imageUrlString = [NSString stringWithFormat:@"%@?param=600y600", songDetailInfo.album.picUrl];
-    [self.turntableView reloadImageWithUrlString:imageUrlString];
-    // 延迟刷新背景的图片
-    [self.backgroundImageView performSelector:@selector(reloadImageWithUrlString:) withObject:imageUrlString afterDelay:1.8];
-    NSLog(@"<<<< I'm OK");
+    [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
 }
+
+
 
 - (void)_handelRefreshLabel:(NSNotification *)notification {
     NCSongInfo *songInfo = notification.object;
     [self _refreshLabelWithTitle:songInfo.name artists:songInfo.artists];
+}
+
+- (void)_handelPlayNextSong:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+    [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
+}
+
+- (void)_handelPlayPreviousSong:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+    [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
 }
 
 // 刷新顶部的歌曲信息
@@ -131,6 +144,16 @@
     }
     [mutableString appendString:artists[artists.count - 1].name];
     self.singerNameLabel.text = mutableString.copy;
+}
+
+// 刷新图片
+- (void)_refreshBackgroundImageWithUrlString:(NSString *)urlString {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self.backgroundImageView];
+
+    NSString *imageUrlString = [NSString stringWithFormat:@"%@?param=600y600", urlString];
+    [self.turntableView reloadImageWithUrlString:imageUrlString];
+    // 延迟刷新背景的图片
+    [self.backgroundImageView performSelector:@selector(reloadImageWithUrlString:) withObject:imageUrlString afterDelay:1.8];
 }
 
 @end
