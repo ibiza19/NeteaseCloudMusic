@@ -6,6 +6,7 @@
 //
 
 #import "NCMusicDetailTurntableView.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface NCMusicDetailTurntableView ()
 
@@ -15,6 +16,8 @@
 @end
 
 @implementation NCMusicDetailTurntableView
+
+#pragma mark - Life Cycle
 
 -(instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
@@ -54,6 +57,14 @@
         })];
     }
     return self;
+}
+
+#pragma mark - Public Method
+
+- (void)reloadImageWithUrlString:(NSString *)urlString {
+    NSLog(@"1");
+    [self.albumCoverImageView sd_setImageWithURL:[NSURL URLWithString:urlString]
+                                placeholderImage:[UIImage imageNamed:@"cm2_default_cover_fm"]];
 }
 
 @end

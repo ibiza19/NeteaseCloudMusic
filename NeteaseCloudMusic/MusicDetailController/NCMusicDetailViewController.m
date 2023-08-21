@@ -97,7 +97,6 @@
     
     [self.view addSubview:({
         self.progressView = [[NCMusicDetailProgressView alloc] initWithFrame:CGRectMake(0, self.controlView.frame.origin.y - 35, SCREEN_WIDTH, 35)];
-//        self.progressView.backgroundColor = [UIColor systemRedColor];
         self.progressView;
     })];
 }
@@ -109,8 +108,11 @@
 }
 
 - (void)_handlePlayMusic:(NSNotification *)notification {
-//    NCSongDetailInfo *songDetailInfo = notification.object;
-//    [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    NSString *imageUrlString = [NSString stringWithFormat:@"%@?param=600y600", songDetailInfo.album.picUrl];
+    [self.turntableView reloadImageWithUrlString:imageUrlString];
+    // 延迟刷新背景的图片
+    [self.backgroundImageView performSelector:@selector(reloadImageWithUrlString:) withObject:imageUrlString afterDelay:1.8];
     NSLog(@"<<<< I'm OK");
 }
 
