@@ -11,7 +11,6 @@
 // 网易云音乐api搭建的url
 #define kBaseUrl @"https://service-osii6x8s-1311271159.gz.apigw.tencentcs.com/release/"
 
-// API
 
 
 @implementation NCHttpManager

@@ -10,7 +10,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 音乐详情界面的背景
-@interface NCMusicDetailBackgroundImageView : UIImageView
+@interface NCMusicDetailBackgroundImageView : UIView
+
+/// 通过url重新加载图片
+/// @param urlString urlString 图片的urlString
+- (void)reloadImageWithUrlString:(NSString *)urlString;
 
 @end
 
