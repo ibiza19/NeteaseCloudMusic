@@ -43,7 +43,7 @@
 #warning 之后加入从文件中读取的逻辑判断
         _index = 0;
         _indexManager = [[NCListManagerIndexUtils alloc] init];
-        [_indexManager refreshRepeatWithSize:10 index:_index];
+        [_indexManager refreshRepeatWithSize:10];
         
         [kNotificationCenter addObserver:self selector:@selector(_handleClickNextSongButton) name:NC_CLICK_NEXTSONG_BUTTON object:nil];
         [kNotificationCenter addObserver:self selector:@selector(_handleClickPreviousSongButton) name:NC_CLICK_PREVIOUSSONG_BUTTON object:nil];
@@ -81,21 +81,14 @@
     // 刷新index
     self.index = index;
     if (self.playModeType == NCPlayModeTypeShuffle) {
-        [self.indexManager refreshShuffleWithSize:songsInfo.count index:index];
+        [self.indexManager refreshShuffleWithSize:songsInfo.count];
     } else {
-        [self.indexManager refreshRepeatWithSize:songsInfo.count index:index];
+        [self.indexManager refreshRepeatWithSize:songsInfo.count];
     }
     // 弹出musicDetailView，发送刷新的通知
     [kNotificationCenter postNotificationName:NC_MUSICDETAILVIEW_REFRESHLABEL_NOTIFICATION object:songsInfo[index]];
     [kNotificationCenter postNotificationName:NCMINIPLAYERVIEW_LET_APPEAR_NOTIFICATION object:nil];
     
-}
-
-#pragma mark - Public Method
-
-- (void)setIndex:(NSInteger)index {
-    _index = index;
-    [_indexManager refreshIndex:index];
 }
 
 #pragma mark - Private Method
@@ -117,12 +110,12 @@
 #pragma mark Notification
 
 - (void)_handleClickNextSongButton {
-    self.index = [self.indexManager nextIndex];
+    self.index = [self.indexManager nextIndexWithIndex:self.index];
     [kNotificationCenter postNotificationName:NC_PLAY_NEXTSONG object:self.playListInfo[self.index]];
 }
 
 - (void)_handleClickPreviousSongButton {
-    self.index = [self.indexManager previousIndex];
+    self.index = [self.indexManager previousWithIndex:self.index];
     [kNotificationCenter postNotificationName:NC_PLAY_NEXTSONG object:self.playListInfo[self.index]];
 }
 
@@ -130,13 +123,13 @@
     NSString *playModeString = notification.name;
     if ([playModeString isEqualToString:NC_PLAYMODE_TO_REPEAT]) {
         self.playModeType = NCPlayModeTypeRepeat;
-        [self.indexManager refreshRepeatWithSize:self.playListInfo.count index:self.index];
+        [self.indexManager refreshRepeatWithSize:self.playListInfo.count];
     } else if ([playModeString isEqualToString:NC_PLAYMODE_TO_REPEATONE]) {
         self.playModeType = NCPlayModeTypeRepeatOne;
-        [self.indexManager refreshRepeatWithSize:self.playListInfo.count index:self.index];
+        [self.indexManager refreshRepeatWithSize:self.playListInfo.count];
     } else if ([playModeString isEqualToString:NC_PLAYMODE_TO_Shuffle]) {
         self.playModeType = NCPlayModeTypeShuffle;
-        [self.indexManager refreshShuffleWithSize:self.playListInfo.count index:self.index];
+        [self.indexManager refreshShuffleWithSize:self.playListInfo.count];
     }
 
 }

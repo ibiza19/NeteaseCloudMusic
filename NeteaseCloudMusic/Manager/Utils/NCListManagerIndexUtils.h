@@ -14,23 +14,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 顺序播放所需的index
 /// @param size array的大小
-/// @param realIndex array当前的index
-- (void)refreshRepeatWithSize:(NSInteger)size index:(NSInteger)realIndex;
+- (void)refreshRepeatWithSize:(NSInteger)size;
 
 /// 随机播放所需的index
 /// @param size array的大小
+- (void)refreshShuffleWithSize:(NSInteger)size;
+
+/// 返回这个index之前的index
 /// @param realIndex array当前的index
-- (void)refreshShuffleWithSize:(NSInteger)size index:(NSInteger)realIndex;
+- (NSInteger)previousWithIndex:(NSInteger)realIndex;
 
-/// 不刷新数组，只刷新index
-/// @param realIndex 传入刷新的index
-- (void)refreshIndex:(NSInteger)realIndex;
-
-/// 获取之前的index
-- (NSInteger)previousIndex;
-
-/// 获取之后的index
-- (NSInteger)nextIndex;
+/// 返回这个index之后的index
+/// @param realIndex array当前的index
+- (NSInteger)nextIndexWithIndex:(NSInteger)realIndex;
 
 @end
 

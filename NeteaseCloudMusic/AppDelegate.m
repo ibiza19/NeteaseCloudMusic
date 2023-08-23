@@ -6,6 +6,8 @@
 //
 
 #import "AppDelegate.h"
+#import "NCPlayListManager.h"
+#import "NCMusicPlayerManager.h"
 
 @interface AppDelegate ()
 
@@ -15,10 +17,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // 初始化单例
+    [NCPlayListManager sharedManager];
+    [NCMusicPlayerManager sharedManager];
+    
     return YES;
 }
 
+
+- (void)applicationWillTerminate:(UIApplication *)application {
+    NSInteger index = [NCPlayListManager sharedManager].index;
+    NSLog(@"");
+}
 
 #pragma mark - UISceneSession lifecycle
 

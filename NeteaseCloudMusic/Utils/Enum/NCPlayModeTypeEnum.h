@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, NCPlayModeType) {
     NCPlayModeTypeShuffle       // 随机播放
 };
 
+/// 播放模式类型
 @interface NCPlayModeTypeEnum : NSObject
 
 @end
