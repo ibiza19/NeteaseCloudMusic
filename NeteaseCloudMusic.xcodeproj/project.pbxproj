@@ -21,7 +21,16 @@
 		A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F32A769A5F00A86A5F /* NCMusicDetailViewController.m */; };
 		A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */; };
 		A81076022A77A48200A86A5F /* NCColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A81076012A77A48200A86A5F /* NCColor.m */; };
+		A818926B2A8B6EF200933133 /* NCSongDetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A818926A2A8B6EF200933133 /* NCSongDetailInfo.m */; };
+		A818926E2A8B87FF00933133 /* NCMusicPlayerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A818926D2A8B87FF00933133 /* NCMusicPlayerManager.m */; };
 		A86D5C162A7A8CB700BCBE9B /* NCNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = A86D5C152A7A8CB700BCBE9B /* NCNotification.m */; };
+		A87674022A8F488600BC961C /* NCArtistInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674012A8F488600BC961C /* NCArtistInfo.m */; };
+		A87674072A8F4A3500BC961C /* NCAlbumInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674062A8F4A3500BC961C /* NCAlbumInfo.m */; };
+		A876740A2A8F4DF600BC961C /* NCSongInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674092A8F4DF600BC961C /* NCSongInfo.m */; };
+		A876740E2A8F581500BC961C /* NCPlayListManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A876740D2A8F581500BC961C /* NCPlayListManager.m */; };
+		A87674112A8F69A700BC961C /* NCBlockMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674102A8F69A700BC961C /* NCBlockMacros.m */; };
+		A87674142A935FBB00BC961C /* NCPlayModeTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */; };
+		A876741B2A937B7200BC961C /* NCListManagerIndexUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -83,8 +92,26 @@
 		A81075F62A76A01A00A86A5F /* NCMiniPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMiniPlayerView.m; sourceTree = "<group>"; };
 		A81076002A77A48100A86A5F /* NCColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCColor.h; sourceTree = "<group>"; };
 		A81076012A77A48200A86A5F /* NCColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCColor.m; sourceTree = "<group>"; };
+		A81892692A8B6EF200933133 /* NCSongDetailInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCSongDetailInfo.h; sourceTree = "<group>"; };
+		A818926A2A8B6EF200933133 /* NCSongDetailInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCSongDetailInfo.m; sourceTree = "<group>"; };
+		A818926C2A8B87FF00933133 /* NCMusicPlayerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCMusicPlayerManager.h; sourceTree = "<group>"; };
+		A818926D2A8B87FF00933133 /* NCMusicPlayerManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCMusicPlayerManager.m; sourceTree = "<group>"; };
 		A86D5C142A7A8CB700BCBE9B /* NCNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNotification.h; sourceTree = "<group>"; };
 		A86D5C152A7A8CB700BCBE9B /* NCNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCNotification.m; sourceTree = "<group>"; };
+		A87674002A8F488600BC961C /* NCArtistInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCArtistInfo.h; sourceTree = "<group>"; };
+		A87674012A8F488600BC961C /* NCArtistInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCArtistInfo.m; sourceTree = "<group>"; };
+		A87674052A8F4A3500BC961C /* NCAlbumInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCAlbumInfo.h; sourceTree = "<group>"; };
+		A87674062A8F4A3500BC961C /* NCAlbumInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCAlbumInfo.m; sourceTree = "<group>"; };
+		A87674082A8F4DF600BC961C /* NCSongInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCSongInfo.h; sourceTree = "<group>"; };
+		A87674092A8F4DF600BC961C /* NCSongInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCSongInfo.m; sourceTree = "<group>"; };
+		A876740C2A8F581500BC961C /* NCPlayListManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPlayListManager.h; sourceTree = "<group>"; };
+		A876740D2A8F581500BC961C /* NCPlayListManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCPlayListManager.m; sourceTree = "<group>"; };
+		A876740F2A8F69A700BC961C /* NCBlockMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCBlockMacros.h; sourceTree = "<group>"; };
+		A87674102A8F69A700BC961C /* NCBlockMacros.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCBlockMacros.m; sourceTree = "<group>"; };
+		A87674122A935FBB00BC961C /* NCPlayModeTypeEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPlayModeTypeEnum.h; sourceTree = "<group>"; };
+		A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCPlayModeTypeEnum.m; sourceTree = "<group>"; };
+		A87674192A937B7200BC961C /* NCListManagerIndexUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCListManagerIndexUtils.h; sourceTree = "<group>"; };
+		A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCListManagerIndexUtils.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -251,6 +278,76 @@
 			path = MineController;
 			sourceTree = "<group>";
 		};
+		A81892672A8A45C100933133 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				A80258692A7E75E600778EDC /* NCHttpManager.h */,
+				A802586A2A7E75E600778EDC /* NCHttpManager.m */,
+				A818926C2A8B87FF00933133 /* NCMusicPlayerManager.h */,
+				A818926D2A8B87FF00933133 /* NCMusicPlayerManager.m */,
+				A876740C2A8F581500BC961C /* NCPlayListManager.h */,
+				A876740D2A8F581500BC961C /* NCPlayListManager.m */,
+				A87674152A93795600BC961C /* Utils */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		A81892682A8B6D9B00933133 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A87674042A8F4A2100BC961C /* AlbumInfo */,
+				A87674032A8F4A1100BC961C /* ArtistInfo */,
+				A87673FF2A8F483F00BC961C /* SongDetailInfo */,
+				A876740B2A8F4E0100BC961C /* SongInfo */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A87673FF2A8F483F00BC961C /* SongDetailInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A81892692A8B6EF200933133 /* NCSongDetailInfo.h */,
+				A818926A2A8B6EF200933133 /* NCSongDetailInfo.m */,
+			);
+			path = SongDetailInfo;
+			sourceTree = "<group>";
+		};
+		A87674032A8F4A1100BC961C /* ArtistInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A87674002A8F488600BC961C /* NCArtistInfo.h */,
+				A87674012A8F488600BC961C /* NCArtistInfo.m */,
+			);
+			path = ArtistInfo;
+			sourceTree = "<group>";
+		};
+		A87674042A8F4A2100BC961C /* AlbumInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A87674052A8F4A3500BC961C /* NCAlbumInfo.h */,
+				A87674062A8F4A3500BC961C /* NCAlbumInfo.m */,
+			);
+			path = AlbumInfo;
+			sourceTree = "<group>";
+		};
+		A876740B2A8F4E0100BC961C /* SongInfo */ = {
+			isa = PBXGroup;
+			children = (
+				A87674082A8F4DF600BC961C /* NCSongInfo.h */,
+				A87674092A8F4DF600BC961C /* NCSongInfo.m */,
+			);
+			path = SongInfo;
+			sourceTree = "<group>";
+		};
+		A87674152A93795600BC961C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A87674192A937B7200BC961C /* NCListManagerIndexUtils.h */,
+				A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,8 +357,10 @@
 				A81076012A77A48200A86A5F /* NCColor.m */,
 				A86D5C142A7A8CB700BCBE9B /* NCNotification.h */,
 				A86D5C152A7A8CB700BCBE9B /* NCNotification.m */,
-				A80258692A7E75E600778EDC /* NCHttpManager.h */,
-				A802586A2A7E75E600778EDC /* NCHttpManager.m */,
+				A876740F2A8F69A700BC961C /* NCBlockMacros.h */,
+				A87674102A8F69A700BC961C /* NCBlockMacros.m */,
+				A87674122A935FBB00BC961C /* NCPlayModeTypeEnum.h */,
+				A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -291,6 +390,8 @@
 		A8DE4B2F2A69252C00A92A93 /* NeteaseCloudMusic */ = {
 			isa = PBXGroup;
 			children = (
+				A81892682A8B6D9B00933133 /* Model */,
+				A81892672A8A45C100933133 /* Manager */,
 				A81076052A77B62800A86A5F /* MineController */,
 				A81076042A77B61200A86A5F /* MiniPlayerView */,
 				A81076032A77B5E900A86A5F /* MusicDetailController */,
@@ -512,19 +613,28 @@
 				A81075F72A76A01A00A86A5F /* NCMiniPlayerView.m in Sources */,
 				A81075F42A769A5F00A86A5F /* NCMusicDetailViewController.m in Sources */,
 				A8A91DD32A7283CA00C59970 /* NCScreen.m in Sources */,
+				A87674142A935FBB00BC961C /* NCPlayModeTypeEnum.m in Sources */,
 				A81075DD2A7500B900A86A5F /* NCMineViewController.m in Sources */,
 				A81075E12A760E4F00A86A5F /* NCNavigationControllerPushAnimatedTransitionBottomToTop.m in Sources */,
 				A8F160E82A83297200308E4E /* NCMusicDetailProgressView.m in Sources */,
+				A876740E2A8F581500BC961C /* NCPlayListManager.m in Sources */,
 				A8DE4B432A69252D00A92A93 /* main.m in Sources */,
 				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
 				A801F4AD2A809753003D156A /* NCMusicDetailTurntableView.m in Sources */,
 				A8F160E52A82346F00308E4E /* NCMusicDetailControlView.m in Sources */,
+				A87674112A8F69A700BC961C /* NCBlockMacros.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
+				A876740A2A8F4DF600BC961C /* NCSongInfo.m in Sources */,
+				A876741B2A937B7200BC961C /* NCListManagerIndexUtils.m in Sources */,
 				A802586B2A7E75E600778EDC /* NCHttpManager.m in Sources */,
+				A818926E2A8B87FF00933133 /* NCMusicPlayerManager.m in Sources */,
 				A81075F12A76991700A86A5F /* NCBottomBarConfig.m in Sources */,
 				A8DE4B352A69252C00A92A93 /* SceneDelegate.m in Sources */,
+				A87674022A8F488600BC961C /* NCArtistInfo.m in Sources */,
 				A81076022A77A48200A86A5F /* NCColor.m in Sources */,
 				A801F4AA2A808C4B003D156A /* NCMusicDetailBackgroundImageView.m in Sources */,
+				A87674072A8F4A3500BC961C /* NCAlbumInfo.m in Sources */,
+				A818926B2A8B6EF200933133 /* NCSongDetailInfo.m in Sources */,
 				A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */,
 				A81075EB2A7658D000A86A5F /* NCTabBar.m in Sources */,
 				A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */,

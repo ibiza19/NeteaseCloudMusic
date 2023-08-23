@@ -12,6 +12,9 @@
 #import "NCMusicDetailTurntableView.h"
 #import "NCMusicDetailControlView.h"
 #import "NCMusicDetailProgressView.h"
+#import "NCNotification.h"
+#import "NCSongDetailInfo.h"
+#import "NCSongInfo.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -29,11 +32,25 @@
 
 #pragma mark - Life Cycle
 
++ (instancetype)sharedInstance {
+    static NCMusicDetailViewController *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[super allocWithZone:NULL] init];
+    });
+    return instance;
+}
+
 -(instancetype)init {
     self = [super init];
     if (self) {
         self.currentPushOperation = NCNavigationControllerPushOperationBottomUp;
         self.view.backgroundColor = [UIColor whiteColor];
+        [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic:) name:NCPLAYMUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handelRefreshLabel:) name:NC_MUSICDETAILVIEW_REFRESHLABEL_NOTIFICATION object:nil];
+        
+        [kNotificationCenter addObserver:self selector:@selector(_handelPlayNextSong:) name:NC_PLAY_NEXTSONG object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handelPlayPreviousSong:) name:NC_PLAY_PREVIOUSSONG object:nil];
     }
     return self;
 }
@@ -83,7 +100,6 @@
     
     [self.view addSubview:({
         self.progressView = [[NCMusicDetailProgressView alloc] initWithFrame:CGRectMake(0, self.controlView.frame.origin.y - 35, SCREEN_WIDTH, 35)];
-//        self.progressView.backgroundColor = [UIColor systemRedColor];
         self.progressView;
     })];
 }
@@ -92,6 +108,52 @@
 
 - (void)_clickBackButton {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)_handlePlayMusic:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
+}
+
+
+
+- (void)_handelRefreshLabel:(NSNotification *)notification {
+    NCSongInfo *songInfo = notification.object;
+    [self _refreshLabelWithTitle:songInfo.name artists:songInfo.artists];
+}
+
+- (void)_handelPlayNextSong:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+    [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
+}
+
+- (void)_handelPlayPreviousSong:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+    [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
+}
+
+// 刷新顶部的歌曲信息
+- (void)_refreshLabelWithTitle:(NSString *)title artists:(NSArray<NCArtistInfo *> *)artists {
+    self.titleLabel.text = title.copy;
+    NSMutableString *mutableString = [[NSMutableString alloc] init];
+
+    for (int i = 0; i < artists.count - 1; i++) {
+        [mutableString appendFormat:@"%@/", artists[i].name];
+    }
+    [mutableString appendString:artists[artists.count - 1].name];
+    self.singerNameLabel.text = mutableString.copy;
+}
+
+// 刷新图片
+- (void)_refreshBackgroundImageWithUrlString:(NSString *)urlString {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self.backgroundImageView];
+
+    NSString *imageUrlString = [NSString stringWithFormat:@"%@?param=600y600", urlString];
+    [self.turntableView reloadImageWithUrlString:imageUrlString];
+    // 延迟刷新背景的图片
+    [self.backgroundImageView performSelector:@selector(reloadImageWithUrlString:) withObject:imageUrlString afterDelay:1.8];
 }
 
 @end

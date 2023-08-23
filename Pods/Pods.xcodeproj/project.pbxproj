@@ -882,7 +882,7 @@
 		9AB98A7D5D5F50F662B8DD2D4DE733F1 /* QMUIEmotionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QMUIEmotionView.m; path = QMUIKit/QMUIComponents/QMUIEmotionView.m; sourceTree = "<group>"; };
 		9CF46C2120710E2FD1E325D97B3DCEE0 /* QMUIImagePickerHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMUIImagePickerHelper.h; path = QMUIKit/QMUIComponents/ImagePickerLibrary/QMUIImagePickerHelper.h; sourceTree = "<group>"; };
 		9D8B0487F14CC8CAD2E71EB5849193F3 /* SDImageHEICCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageHEICCoder.m; path = SDWebImage/Core/SDImageHEICCoder.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DE01429A96637BEF076176BFC26C811 /* SDWebImagePrefetcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImagePrefetcher.h; path = SDWebImage/Core/SDWebImagePrefetcher.h; sourceTree = "<group>"; };
 		9ED6236556E09328E4A953487EA2483E /* UIImage+MemoryCacheCost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MemoryCacheCost.h"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.h"; sourceTree = "<group>"; };
 		9EFB2E1A28B65D1B76A639D02B5EB383 /* SDWebImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImage.h; path = WebImage/SDWebImage.h; sourceTree = "<group>"; };
@@ -901,7 +901,7 @@
 		A44D40B266CA4D6625F92E0209004FFF /* SDImageGIFCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageGIFCoder.m; path = SDWebImage/Core/SDImageGIFCoder.m; sourceTree = "<group>"; };
 		A47126C8AAE746DF004FF5D71DC7ACCE /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/Core/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		A4C1B2275BFB91AB5711EB720A6CA52B /* QMUITheme.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMUITheme.h; path = QMUIKit/QMUIComponents/QMUITheme/QMUITheme.h; sourceTree = "<group>"; };
-		A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = AFNetworking; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAFNetworking.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5520B9A90CAE94A7F77AD2712FF53DD /* QMUISearchController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QMUISearchController.m; path = QMUIKit/QMUIComponents/QMUISearchController.m; sourceTree = "<group>"; };
 		A55381ABEFEAA8BC3CD615AE4D66A85C /* QMUISearchBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMUISearchBar.h; path = QMUIKit/QMUIComponents/QMUISearchBar.h; sourceTree = "<group>"; };
 		A6350F162B247E5601F646616E9DAED6 /* SDmetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDmetamacros.h; path = SDWebImage/Private/SDmetamacros.h; sourceTree = "<group>"; };
@@ -928,7 +928,7 @@
 		AF1DA6524DFD36CC55217665FFF1D68A /* UISearchBar+QMUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UISearchBar+QMUI.h"; path = "QMUIKit/UIKitExtensions/UISearchBar+QMUI.h"; sourceTree = "<group>"; };
 		AFF3E66DED55AC88ECA5BCC23B29869C /* UIInterface+QMUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIInterface+QMUI.h"; path = "QMUIKit/UIKitExtensions/UIInterface+QMUI.h"; sourceTree = "<group>"; };
 		B01E27AA100CB7F76E66696FE7EFF8BF /* QMUIToastView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QMUIToastView.m; path = QMUIKit/QMUIComponents/ToastView/QMUIToastView.m; sourceTree = "<group>"; };
-		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = SDWebImage; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDWebImage.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DE8C423D38F2C7199F9DD38F19E3B9 /* UIActivityIndicatorView+QMUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIActivityIndicatorView+QMUI.m"; path = "QMUIKit/UIKitExtensions/UIActivityIndicatorView+QMUI.m"; sourceTree = "<group>"; };
 		B2FBAD6F713412A5C815E9321B32B059 /* QMUIBarProtocolPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMUIBarProtocolPrivate.h; path = QMUIKit/UIKitExtensions/QMUIBarProtocol/QMUIBarProtocolPrivate.h; sourceTree = "<group>"; };
 		B2FFA49BA11FF817A2A5BB844170D17D /* NSMethodSignature+QMUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSMethodSignature+QMUI.h"; path = "QMUIKit/UIKitExtensions/NSMethodSignature+QMUI.h"; sourceTree = "<group>"; };
@@ -1038,7 +1038,7 @@
 		E23C739EB864147079D170B29827702E /* QMUIMoreOperationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMUIMoreOperationController.h; path = QMUIKit/QMUIComponents/QMUIMoreOperationController.h; sourceTree = "<group>"; };
 		E24D4B308C7A663A1790299AE7628C42 /* QMUICommonDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QMUICommonDefines.h; path = QMUIKit/QMUICore/QMUICommonDefines.h; sourceTree = "<group>"; };
 		E2DFDD8D341E8F74ABEC5495C49A715E /* UIColor+QMUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+QMUI.m"; path = "QMUIKit/UIKitExtensions/UIColor+QMUI.m"; sourceTree = "<group>"; };
-		E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = YYModel; path = libYYModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E460D5B0416D36F66EE8EC89E5D2FA0A /* libYYModel.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libYYModel.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50B0A335EC2B2CC366C0EAEAC489EC7 /* UITraitCollection+QMUI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UITraitCollection+QMUI.m"; path = "QMUIKit/UIKitExtensions/UITraitCollection+QMUI.m"; sourceTree = "<group>"; };
 		E5B5799889F4F19063AFB71421862CBC /* QMUIStaticTableViewCellDataSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QMUIStaticTableViewCellDataSource.m; path = QMUIKit/QMUIComponents/StaticTableView/QMUIStaticTableViewCellDataSource.m; sourceTree = "<group>"; };
 		E5CB80D6E87687318D31F807F2850059 /* QMUIBarProtocolPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QMUIBarProtocolPrivate.m; path = QMUIKit/UIKitExtensions/QMUIBarProtocol/QMUIBarProtocolPrivate.m; sourceTree = "<group>"; };
@@ -1183,12 +1183,12 @@
 		0DD7A758AC7BF5347305FED9E4C13012 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */,
+				A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */,
 				7A149580BB7649F85204262099751C12 /* Pods-NeteaseCloudMusic */,
 				8596B7A0C5A3E188061E9EDDAB573FCE /* QMUIKit */,
 				FFDF743B2D7D655F7364FF1154FFEDE6 /* QMUIKit-QMUIResources */,
-				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
-				E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel */,
+				B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */,
+				E460D5B0416D36F66EE8EC89E5D2FA0A /* libYYModel.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1401,7 +1401,6 @@
 				34592C9E0F997B2CFD4A67ABE72A2924 /* Support Files */,
 				0FB52454153DD350D1DC48A43CA6A7D2 /* UIKit */,
 			);
-			name = AFNetworking;
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
@@ -1430,7 +1429,6 @@
 				3177C690F67E61E176F634B48E81009D /* YYModel.h */,
 				721C5CB4611CE533A6ED8DF159B29445 /* Support Files */,
 			);
-			name = YYModel;
 			path = YYModel;
 			sourceTree = "<group>";
 		};
@@ -2126,7 +2124,6 @@
 				17D6004AEE107EAE0AC31D713490C24B /* Core */,
 				05F7BADA3F6F1AE531F532C8BE63621D /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -2177,7 +2174,6 @@
 				2D07A8DFEBB25ADB20E9A87C7A093ED0 /* QMUIWeakObjectContainer */,
 				9E2AE13F256AF256B6CAC3DD157A7028 /* Support Files */,
 			);
-			name = QMUIKit;
 			path = QMUIKit;
 			sourceTree = "<group>";
 		};
@@ -2648,7 +2644,7 @@
 			);
 			name = AFNetworking;
 			productName = AFNetworking;
-			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* AFNetworking */;
+			productReference = A4FA15D44DF6BAC7550EDEED10862AA3 /* libAFNetworking.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		3847153A6E5EEFB86565BA840768F429 /* SDWebImage */ = {
@@ -2665,7 +2661,7 @@
 			);
 			name = SDWebImage;
 			productName = SDWebImage;
-			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */;
+			productReference = B0B214D775196BA7CA8E17E53048A493 /* libSDWebImage.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		740124B3EE5D14F0E8AF4C9163C297A8 /* QMUIKit */ = {
@@ -2700,7 +2696,7 @@
 			);
 			name = YYModel;
 			productName = YYModel;
-			productReference = E460D5B0416D36F66EE8EC89E5D2FA0A /* YYModel */;
+			productReference = E460D5B0416D36F66EE8EC89E5D2FA0A /* libYYModel.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		A4F02C53B5B4FD6A5A304A7F0FAC06E6 /* QMUIKit-QMUIResources */ = {
@@ -2748,7 +2744,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1340;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -3134,7 +3130,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3222,7 +3218,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3346,7 +3342,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3369,7 +3365,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3391,7 +3387,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/AFNetworking/AFNetworking-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
@@ -3413,7 +3409,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				GCC_PREFIX_HEADER = "Target Support Files/YYModel/YYModel-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PRIVATE_HEADERS_FOLDER_PATH = "";
