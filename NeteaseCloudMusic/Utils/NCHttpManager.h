@@ -1,19 +1,21 @@
 //
-//  NCMusicPlayerManager.h
+//  NCHttpManager.h
 //  NeteaseCloudMusic
 //
-//  Created by IBIZA on 8/15/23.
+//  Created by IBIZA on 8/5/23.
 //
 
 #import <Foundation/Foundation.h>
-#import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-#define kMusicPlayerManager [NCMusicPlayerManager sharedManager]
+#define kHttpManager [NCHttpManager sharedManager]
 
-/// 单例，管理音乐播放
-@interface NCMusicPlayerManager : NSObject
+typedef void(^NCHttpManagerFinishSuccessBlock)(id responseObject);
+typedef void(^NCHttpManagerFinishFailureBlock)(NSError *error);
+
+/// 单例，管理http请求相关类
+@interface NCHttpManager : NSObject
 
 // 设置单例
 + (instancetype)sharedManager;
@@ -22,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (id)copy __attribute__((unavailable("Invalid, use sharedManager instead")));
 - (id)mutableCopy __attribute__((unavailable("Invalid, use sharedManager instead")));
 
-- (void)_playMusicWithString:(NSString *)musicString;
+
 
 @end
 

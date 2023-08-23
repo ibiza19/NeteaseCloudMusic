@@ -27,9 +27,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-#warning 在controller里面实现相关通知逻辑
-//        [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic) name:NC_PLAY_MUSIC_NOTIFICATION object:nil];
-//        [kNotificationCenter addObserver:self selector:@selector(_handlePauseMusic) name:NC_PAUSE_MUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic) name:NC_PLAY_MUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handlePauseMusic) name:NC_PAUSE_MUSIC_NOTIFICATION object:nil];
         
         CGFloat centerY = frame.size.height / 2;
 
