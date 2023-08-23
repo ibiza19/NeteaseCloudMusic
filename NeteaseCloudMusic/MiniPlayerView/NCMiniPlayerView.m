@@ -34,7 +34,7 @@
 #pragma mark - Private Method
 
 - (void)_clickView {
-    [kNotificationCenter postNotificationName:NCMINIPLAYERVIEW_LET_APPEAR_NOTIFICATION object:nil];
+    [kNotificationCenter postNotificationName:NCMINIPLAYERVIEW_CLICKED_NOTIFICATION object:nil];
 }
 
 @end

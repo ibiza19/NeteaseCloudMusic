@@ -28,9 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 初始化detailViewController
-    [NCMusicDetailViewController sharedInstance];
-    
     NSArray *classNameArray = @[@"NCDiscoverViewController",
                                 @"NCMineViewController"];
     NSArray *titleArray = @[@"发现", @"我的"];
@@ -67,7 +64,7 @@
     self.viewControllers = navigationControllers.copy;
     [self _updateRootTabBarInfos];
     
-    [kNotificationCenter addObserver:self selector:@selector(_pushMusicDetailViewController) name:NCMINIPLAYERVIEW_LET_APPEAR_NOTIFICATION object:nil];
+    [kNotificationCenter addObserver:self selector:@selector(_pushMusicDetailViewController) name:NCMINIPLAYERVIEW_CLICKED_NOTIFICATION object:nil];
 }
 
 - (void)viewDidLayoutSubviews {
@@ -111,7 +108,8 @@
 
 // 推入musicDetailViewController
 - (void)_pushMusicDetailViewController {
-    [((NCNavigationController *)self.selectedViewController) pushViewController:kMusicDetailViewController animated:YES];
+    NCMusicDetailViewController *detailViewController = [[NCMusicDetailViewController alloc] init];
+    [((NCNavigationController *)self.selectedViewController) pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - NCTabBarDelegate
