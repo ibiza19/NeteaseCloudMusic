@@ -15,6 +15,7 @@
 #import "NCNotification.h"
 #import "NCSongDetailInfo.h"
 #import "NCSongInfo.h"
+#import "NCPlayListManager.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -78,7 +79,7 @@
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.font = [UIFont systemFontOfSize:16];
         self.titleLabel.textColor = [UIColor whiteColor];
-        self.titleLabel.text = @"飞机场的10:30";
+        self.titleLabel.text = @"歌曲名";
         self.titleLabel;
     })];
     
@@ -87,7 +88,7 @@
         self.singerNameLabel.textAlignment = NSTextAlignmentCenter;
         self.singerNameLabel.font = [UIFont boldSystemFontOfSize:15];
         self.singerNameLabel.textColor = NCColorGray(190);
-        self.singerNameLabel.text = @"陶喆";
+        self.singerNameLabel.text = @"歌手";
         self.singerNameLabel;
     })];
     
@@ -105,6 +106,12 @@
         self.progressView = [[NCMusicDetailProgressView alloc] initWithFrame:CGRectMake(0, self.controlView.frame.origin.y - 35, SCREEN_WIDTH, 35)];
         self.progressView;
     })];
+    
+    if (kPlayListManager.playListInfo) {
+        NCSongDetailInfo *songDetailInfo = kPlayListManager.playListInfo[kPlayListManager.index];
+        [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+        [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
+    }
 }
 
 #pragma mark - Private Method
@@ -163,10 +170,12 @@
 }
 
 - (void)_handelToPlayMusic {
+    [self.controlView refreshToPlay];
     NSLog(@"");
 }
 
 - (void)_handelToPauseMusic {
+    [self.controlView refreshToPause];
     NSLog(@"");
 }
 

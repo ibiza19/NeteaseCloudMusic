@@ -20,14 +20,13 @@
     // 初始化单例
     [NCPlayListManager sharedManager];
     [NCMusicPlayerManager sharedManager];
-    
     return YES;
 }
 
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-    NSInteger index = [NCPlayListManager sharedManager].index;
-    NSLog(@"");
+    [kPlayListManager archivePlayListAndIndex];
+    [kMusicPlayerManager archivePlayUrl];
 }
 
 #pragma mark - UISceneSession lifecycle

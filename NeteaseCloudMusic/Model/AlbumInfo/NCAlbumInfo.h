@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 歌曲中专辑信息
-@interface NCAlbumInfo : NSObject
+@interface NCAlbumInfo : NSObject <NSSecureCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, copy) NSString *picUrl;

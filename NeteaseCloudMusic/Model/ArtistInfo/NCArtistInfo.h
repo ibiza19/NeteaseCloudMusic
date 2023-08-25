@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 歌曲中的简单歌手信息，包括id和名字
-@interface NCArtistInfo : NSObject
+@interface NCArtistInfo : NSObject <NSSecureCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger ar_id;

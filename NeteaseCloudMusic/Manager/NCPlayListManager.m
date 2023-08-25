@@ -39,11 +39,16 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        
         _playModeType = NCPlayModeTypeRepeat;
-#warning 之后加入从文件中读取的逻辑判断
-        _index = 0;
         _indexManager = [[NCListManagerIndexUtils alloc] init];
-        [_indexManager refreshRepeatWithSize:10];
+
+        [self _initPlayListAndIndexFromLocal];
+        if (self.playListInfo) {
+            [_indexManager refreshRepeatWithSize:_playListInfo.count];
+        } else {
+            _index = 0;
+        }
         
         [kNotificationCenter addObserver:self selector:@selector(_handleClickNextSongButton) name:NC_CLICK_NEXTSONG_BUTTON object:nil];
         [kNotificationCenter addObserver:self selector:@selector(_handleClickPreviousSongButton) name:NC_CLICK_PREVIOUSSONG_BUTTON object:nil];
@@ -107,6 +112,45 @@
 
 }
 
+- (void)_initPlayListAndIndexFromLocal {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *playListDataPath = [cachePath stringByAppendingPathComponent:@"NCData/playList"];
+    NSString *indexDataPath = [cachePath stringByAppendingPathComponent:@"NCData/index"];
+
+    NSData *readPlayListData = [fileManager contentsAtPath:playListDataPath];
+    id unarchivePlayList = [NSKeyedUnarchiver unarchivedObjectOfClasses:[NSSet setWithObjects:[NSArray class], [NCSongDetailInfo class], [NCArtistInfo class], [NCAlbumInfo class], nil] fromData:readPlayListData error:nil];
+    if ([unarchivePlayList isKindOfClass:[NSArray class]] && [unarchivePlayList count] > 0) {
+        _playListInfo = ((NSArray<NCSongDetailInfo *> *)unarchivePlayList).copy;
+    }
+    
+    NSData *readIndexData = [fileManager contentsAtPath:indexDataPath];
+    id unarchiveIndex = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSNumber class] fromData:readIndexData error:nil];
+    _index = ((NSNumber *)unarchiveIndex).integerValue;
+    NSLog(@"");
+}
+
+- (void)archivePlayListAndIndex {
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
+    NSString *dataPath = [cachePath stringByAppendingPathComponent:@"NCData"];
+    NSString *playListDataPath = [cachePath stringByAppendingPathComponent:@"NCData/playList"];
+    NSString *indexDataPath = [cachePath stringByAppendingPathComponent:@"NCData/index"];
+    
+    // 创建文件夹
+    NSError *creatError;
+    [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&creatError];
+    
+    NSData *indexData = [NSKeyedArchiver archivedDataWithRootObject:@(self.index) requiringSecureCoding:YES error:nil];
+    [fileManager createFileAtPath:indexDataPath contents:indexData attributes:nil];
+    NSLog(@"");
+
+    NSData *playListData = [NSKeyedArchiver archivedDataWithRootObject:self.playListInfo requiringSecureCoding:YES error:nil];
+    [fileManager createFileAtPath:playListDataPath contents:playListData attributes:nil];
+}
+
 #pragma mark Notification
 
 - (void)_handleClickNextSongButton {
@@ -133,5 +177,7 @@
     }
 
 }
+
+
 
 @end

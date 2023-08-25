@@ -33,6 +33,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @param index 当前index
 - (void)reloadPlayListWithSongInfo:(NSArray<NCSongInfo *> *)songsInfo Index:(NSInteger)index;
 
+/// 将playList和index存到磁盘中
+- (void)archivePlayListAndIndex;
+
 @end
 
 NS_ASSUME_NONNULL_END

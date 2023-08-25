@@ -98,16 +98,23 @@
     return self;
 }
 
+#pragma mark - Public Method
+- (void)refreshToPlay {
+    self.playButton.image = [UIImage systemImageNamed:@"pause.circle" withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightThin]];
+    self.playStatusType = NCPlayStatusTypePlay;
+}
+
+- (void)refreshToPause {
+    self.playButton.image = [UIImage systemImageNamed:@"play.circle" withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightThin]];
+    self.playStatusType = NCPlayStatusTypePause;
+}
+
 #pragma mark - Private Method
 
 - (void)_clickPlayButton {
     if (self.playStatusType == NCPlayStatusTypePlay) {
-        self.playButton.image = [UIImage systemImageNamed:@"play.circle" withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightThin]];
-        self.playStatusType = NCPlayStatusTypePause;
         [kNotificationCenter postNotificationName:NC_TO_PAUSE_MUSIC_NOTIFICATION object:nil];
     } else if (self.playStatusType == NCPlayStatusTypePause) {
-        self.playButton.image = [UIImage systemImageNamed:@"pause.circle" withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightThin]];
-        self.playStatusType = NCPlayStatusTypePlay;
         [kNotificationCenter postNotificationName:NC_TO_PLAY_MUSIC_NOTIFICATION object:nil];
     }
 }
