@@ -26,7 +26,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     [kPlayListManager archivePlayListAndIndex];
-    [kMusicPlayerManager archivePlayUrl];
 }
 
 #pragma mark - UISceneSession lifecycle

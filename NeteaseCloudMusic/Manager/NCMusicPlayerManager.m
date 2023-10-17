@@ -8,8 +8,13 @@
 #import "NCMusicPlayerManager.h"
 #import "NCPlayStatusTypeEnum.h"
 #import "NCNotification.h"
+#import "NCPlayListManager.h"
+#import "NCBlockMacros.h"
+#import "NCHttpManager.h"
+#import "NCSongDetailInfo.h"
 
-#define testUrl @"http://m8.music.126.net/20230815184824/2080d15ed60fffad43196209d4383c8b/ymusic/41c1/5ea9/ff50/42c98c6cac347a7aa7dc2a43c3a21097.mp3"
+
+//#define testUrl @"http://m702.music.126.net/20230901223654/467e7a1abf07341ec8d021c2dd52d226/jd-musicrep-ts/fb2d/a0ca/9c09/7e29b01a1d73ed641436588fb8a85674.mp3"
 
 @interface NCMusicPlayerManager ()
 
@@ -36,57 +41,63 @@
     if (self) {
         _playStatusType = NCPlayStatusTypePause;
         
-        [kNotificationCenter addObserver:self selector:@selector(_handelToPlayMusic) name:NC_TO_PLAY_MUSIC_NOTIFICATION object:nil];
-        [kNotificationCenter addObserver:self selector:@selector(_handelToPauseMusic) name:NC_TO_PAUSE_MUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handleToPlayMusic) name:NC_TO_PLAY_MUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handleToPauseMusic) name:NC_TO_PAUSE_MUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handlePlayMusic:) name:NCPLAYMUSIC_NOTIFICATION object:nil];
         
-        [self _getPlayUrlFromLocal];
+//        [self _getPlayUrlFromLocal];
+//        if (kPlayListManager.playListInfo) {
+//            NCSongDetailInfo *songDetailInfo = kPlayListManager.playListInfo[kPlayListManager.index];
+//            weakify(self);
+//            [kHttpManager get:kSongUrl(@(songDetailInfo.song_id)) params:nil successBlock:^(id  _Nonnull responseObject) {
+//                strongify(self);
+//                NSString *urlString = (NSString *)responseObject;
+//            } failureBlock:^(NSError * _Nonnull error) {
+//                NSLog(@"");
+//            }];
+//        }
+//        [self _playMusicWithString:@""];
     }
     return self;
 }
 
 #pragma mark - Private Method
 
-- (void)playMusicWithString:(NSString *)musicString {
-    NSURL *url = [NSURL URLWithString:testUrl];
-    AVPlayerItem *musicItem = [[AVPlayerItem alloc] initWithURL:url];
-    self.player = [[AVPlayer alloc] initWithPlayerItem:musicItem];
-    
-    [self.player play];
-    
+- (void)_playMusicWithSongId:(NSNumber *)songId {
+    weakify(self);
+    [kHttpManager get:kSongUrl(songId) params:nil successBlock:^(id  _Nonnull responseObject) {
+        strongify(self);
+        NSString *urlString = (NSString *)[([responseObject objectForKey:@"data"][0]) objectForKey:@"url"];
+        AVPlayerItem *musicItem = [[AVPlayerItem alloc] initWithURL:[NSURL URLWithString:urlString]];
+        self.player = [[AVPlayer alloc] initWithPlayerItem:musicItem];
+    } failureBlock:^(NSError * _Nonnull error) {
+        NSLog(@"");
+    }];
 }
 
-- (NSURL *)_getPlayUrlFromLocal {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *playUrlPath = [cachePath stringByAppendingPathComponent:@"NCData/playUrl"];
-    
-    NSData *readPlayUrlData = [fileManager contentsAtPath:playUrlPath];
-    id unarchiveUrl = [NSKeyedUnarchiver unarchivedObjectOfClass:[NSURL class] fromData:readPlayUrlData error:nil];
-    return (NSURL *)unarchiveUrl;
-}
-
-- (void)archivePlayUrl {
-    NSFileManager *fileManager = [NSFileManager defaultManager];
-    
-    NSString *cachePath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject];
-    NSString *dataPath = [cachePath stringByAppendingPathComponent:@"NCData"];
-    NSString *playUrlPath = [cachePath stringByAppendingPathComponent:@"NCData/playUrl"];
-    
-    // 创建文件夹
-    NSError *creatError;
-    [fileManager createDirectoryAtPath:dataPath withIntermediateDirectories:YES attributes:nil error:&creatError];
-
-    NSData *playUrlData = [NSKeyedArchiver archivedDataWithRootObject:((AVURLAsset *)self.player.currentItem.asset).URL requiringSecureCoding:YES error:nil];
-    [fileManager createFileAtPath:playUrlPath contents:playUrlData attributes:nil];
-}
 
 #pragma mark Notification
-- (void)_handelToPlayMusic {
+
+- (void)_handlePlayMusic:(NSNotification *)notification {
+    NCSongDetailInfo *songDetailInfo = notification.object;
+    [self _playMusicWithSongId:@(songDetailInfo.song_id)];
+}
+
+- (void)_handleToPlayMusic {
+    if (!self.player) {
+        if (kPlayListManager.playListInfo) {
+            NCSongDetailInfo *songDetailInfo = kPlayListManager.playListInfo[kPlayListManager.index];
+            [self _playMusicWithSongId:@(songDetailInfo.song_id)];
+        }
+    }
+    if (self.player) {
+        [self.player play];
+    }
     NSLog(@"");
 }
 
-- (void)_handelToPauseMusic {
+- (void)_handleToPauseMusic {
+    [self.player pause];
     NSLog(@"");
 }
 

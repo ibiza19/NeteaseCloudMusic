@@ -14,6 +14,8 @@
 #define kSongDetail(x) [NSString stringWithFormat:@"song/detail?ids=%@", x]
 // 搜索歌曲接口，传入需要搜索的字符串
 #define kSearchSong(x) [NSString stringWithFormat:@"search?keywords=%@", x]
+// 获取音乐URL接口，传入音乐URL
+#define kSongUrl(x) [NSString stringWithFormat:@"song/url/v1?id=%@&level=standard", x]
 
 typedef void(^NCHttpManagerFinishSuccessBlock)(id responseObject);
 typedef void(^NCHttpManagerFinishFailureBlock)(NSError *error);
