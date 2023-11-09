@@ -45,9 +45,11 @@
 }
 
 - (NSInteger)nextIndexWithIndex:(NSInteger)realIndex {
-    NSInteger index = [self.indexArray indexOfObject:@(realIndex)];
-    index = (index + 1) % self.indexArray.count;
-    return self.indexArray[index].integerValue;
+    if (self.indexArray) {
+        NSInteger index = [self.indexArray indexOfObject:@(realIndex)];
+        index = (index + 1) % self.indexArray.count;
+    }
+    return 0;
 }
 
 @end
