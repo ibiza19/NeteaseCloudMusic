@@ -31,6 +31,7 @@
 		A87674112A8F69A700BC961C /* NCBlockMacros.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674102A8F69A700BC961C /* NCBlockMacros.m */; };
 		A87674142A935FBB00BC961C /* NCPlayModeTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */; };
 		A876741B2A937B7200BC961C /* NCListManagerIndexUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */; };
+		A876741F2A95B2B100BC961C /* NCPlayStatusTypeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = A876741E2A95B2B100BC961C /* NCPlayStatusTypeEnum.m */; };
 		A8923B402A6E62EE0057FB41 /* NCTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */; };
 		A8923B432A6E64F80057FB41 /* NCNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B422A6E64F80057FB41 /* NCNavigationController.m */; };
 		A8923B462A6E671D0057FB41 /* NCDiscoverViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8923B452A6E671D0057FB41 /* NCDiscoverViewController.m */; };
@@ -112,6 +113,8 @@
 		A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCPlayModeTypeEnum.m; sourceTree = "<group>"; };
 		A87674192A937B7200BC961C /* NCListManagerIndexUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCListManagerIndexUtils.h; sourceTree = "<group>"; };
 		A876741A2A937B7200BC961C /* NCListManagerIndexUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCListManagerIndexUtils.m; sourceTree = "<group>"; };
+		A876741D2A95B2B100BC961C /* NCPlayStatusTypeEnum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCPlayStatusTypeEnum.h; sourceTree = "<group>"; };
+		A876741E2A95B2B100BC961C /* NCPlayStatusTypeEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCPlayStatusTypeEnum.m; sourceTree = "<group>"; };
 		A8923B3E2A6E62EE0057FB41 /* NCTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCTabBarController.h; sourceTree = "<group>"; };
 		A8923B3F2A6E62EE0057FB41 /* NCTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NCTabBarController.m; sourceTree = "<group>"; };
 		A8923B412A6E64F80057FB41 /* NCNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NCNavigationController.h; sourceTree = "<group>"; };
@@ -348,9 +351,21 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		A876741C2A95B27E00BC961C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				A87674122A935FBB00BC961C /* NCPlayModeTypeEnum.h */,
+				A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */,
+				A876741D2A95B2B100BC961C /* NCPlayStatusTypeEnum.h */,
+				A876741E2A95B2B100BC961C /* NCPlayStatusTypeEnum.m */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		A8A91DDB2A729FCA00C59970 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A876741C2A95B27E00BC961C /* Enum */,
 				A8A91DD12A7283CA00C59970 /* NCScreen.h */,
 				A8A91DD22A7283CA00C59970 /* NCScreen.m */,
 				A81076002A77A48100A86A5F /* NCColor.h */,
@@ -359,8 +374,6 @@
 				A86D5C152A7A8CB700BCBE9B /* NCNotification.m */,
 				A876740F2A8F69A700BC961C /* NCBlockMacros.h */,
 				A87674102A8F69A700BC961C /* NCBlockMacros.m */,
-				A87674122A935FBB00BC961C /* NCPlayModeTypeEnum.h */,
-				A87674132A935FBB00BC961C /* NCPlayModeTypeEnum.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -622,6 +635,7 @@
 				A81075E72A760EBF00A86A5F /* NCNavigationControllerPopAnimatedTransitionTopToBottom.m in Sources */,
 				A801F4AD2A809753003D156A /* NCMusicDetailTurntableView.m in Sources */,
 				A8F160E52A82346F00308E4E /* NCMusicDetailControlView.m in Sources */,
+				A876741F2A95B2B100BC961C /* NCPlayStatusTypeEnum.m in Sources */,
 				A87674112A8F69A700BC961C /* NCBlockMacros.m in Sources */,
 				A81075D92A74FF5C00A86A5F /* NCBaseViewController.m in Sources */,
 				A876740A2A8F4DF600BC961C /* NCSongInfo.m in Sources */,

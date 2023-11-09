@@ -9,6 +9,7 @@
 #import "NCNotification.h"
 #import "NCScreen.h"
 #import "NCPlayModeTypeEnum.h"
+#import "NCPlayStatusTypeEnum.h"
 
 @interface NCMusicDetailControlView ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong, readwrite) UIImageView *playModeButton;
 @property (nonatomic, strong, readwrite) UIImageView *playListButton;
 @property (nonatomic, assign, readwrite) NCPlayModeType playModeType;
+@property (nonatomic, assign, readwrite) NCPlayStatusType playStatusType;
 
 
 @end
@@ -42,6 +44,7 @@
             UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(_clickPlayButton)];
             [_playButton addGestureRecognizer:tapGesture];
             _playButton.userInteractionEnabled = YES;
+            _playStatusType = NCPlayStatusTypePause;
             _playButton;
         })];
         
@@ -95,10 +98,25 @@
     return self;
 }
 
+#pragma mark - Public Method
+- (void)refreshToPlay {
+    self.playButton.image = [UIImage systemImageNamed:@"pause.circle" withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightThin]];
+    self.playStatusType = NCPlayStatusTypePlay;
+}
+
+- (void)refreshToPause {
+    self.playButton.image = [UIImage systemImageNamed:@"play.circle" withConfiguration:[UIImageSymbolConfiguration configurationWithWeight:UIImageSymbolWeightThin]];
+    self.playStatusType = NCPlayStatusTypePause;
+}
+
 #pragma mark - Private Method
 
 - (void)_clickPlayButton {
-    
+    if (self.playStatusType == NCPlayStatusTypePlay) {
+        [kNotificationCenter postNotificationName:NC_TO_PAUSE_MUSIC_NOTIFICATION object:nil];
+    } else if (self.playStatusType == NCPlayStatusTypePause) {
+        [kNotificationCenter postNotificationName:NC_TO_PLAY_MUSIC_NOTIFICATION object:nil];
+    }
 }
 
 - (void)_clickPreviousSongButton {

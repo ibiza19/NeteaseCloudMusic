@@ -21,9 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 + (id)new __attribute__((unavailable("Invalid, use sharedManager instead")));
 - (id)copy __attribute__((unavailable("Invalid, use sharedManager instead")));
 - (id)mutableCopy __attribute__((unavailable("Invalid, use sharedManager instead")));
-
-- (void)_playMusicWithString:(NSString *)musicString;
-
 @end
 
 NS_ASSUME_NONNULL_END

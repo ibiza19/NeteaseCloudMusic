@@ -11,11 +11,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 
-// 播放音乐通知
-#define NC_PLAY_MUSIC_NOTIFICATION @"NCPlayMusicNotification"
-// 暂停播放音乐通知
-#define NC_PAUSE_MUSIC_NOTIFICATION @"NCPauseMusicNotification"
-
 // 播放控制
 // 播放下一首歌
     // 点击下一首歌
@@ -28,6 +23,13 @@ NS_ASSUME_NONNULL_BEGIN
 #define NC_CLICK_PREVIOUSSONG_BUTTON @"NCClickPreviousSongButton"
     // listManager推送上一首歌的通知
 #define NC_PLAY_PREVIOUSSONG @"NCPlayPreviousSong"
+
+// 播放音乐（从暂停到播放）
+#define NC_TO_PLAY_MUSIC_NOTIFICATION @"NCToPlayMusicNotification"
+// 暂停播放音乐（从播放到暂停）
+#define NC_TO_PAUSE_MUSIC_NOTIFICATION @"NCToPauseMusicNotification"
+
+
 
 // 播放歌曲，对当前歌曲列表刷新后的播放，不用刷新label
 #define NCPLAYMUSIC_NOTIFICATION @"NCPlayMusicNotification"

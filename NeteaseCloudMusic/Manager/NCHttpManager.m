@@ -9,7 +9,7 @@
 #import "AFNetworking/AFNetworking.h"
 
 // 网易云音乐api搭建的url
-#define kBaseUrl @"https://service-osii6x8s-1311271159.gz.apigw.tencentcs.com/release/"
+#define kBaseUrl @"https://service-osii6x8s-1311271159.gz.apigw.tencentcs.com/releas/"
 
 
 
@@ -29,6 +29,7 @@
 successBlock:(NCHttpManagerFinishSuccessBlock)successBlock
 failureBlock:(NCHttpManagerFinishFailureBlock)failureBlock {
     
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
@@ -37,6 +38,9 @@ failureBlock:(NCHttpManagerFinishFailureBlock)failureBlock {
     
     // 解决链接中有中文出现报错
     url = [url stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    
+    NSLog(@"%@", [successBlock class]);
+
     
     [manager GET:url parameters:params headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         successBlock(responseObject);

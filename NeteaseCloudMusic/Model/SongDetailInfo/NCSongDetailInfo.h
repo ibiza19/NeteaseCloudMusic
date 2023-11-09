@@ -12,7 +12,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 歌曲详细信息
-@interface NCSongDetailInfo : NSObject
+@interface NCSongDetailInfo : NSObject <NSSecureCoding>
 
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, assign) NSInteger song_id;

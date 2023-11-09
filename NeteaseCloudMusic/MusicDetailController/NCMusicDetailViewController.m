@@ -15,6 +15,7 @@
 #import "NCNotification.h"
 #import "NCSongDetailInfo.h"
 #import "NCSongInfo.h"
+#import "NCPlayListManager.h"
 
 @interface NCMusicDetailViewController ()
 
@@ -51,6 +52,9 @@
         
         [kNotificationCenter addObserver:self selector:@selector(_handelPlayNextSong:) name:NC_PLAY_NEXTSONG object:nil];
         [kNotificationCenter addObserver:self selector:@selector(_handelPlayPreviousSong:) name:NC_PLAY_PREVIOUSSONG object:nil];
+        
+        [kNotificationCenter addObserver:self selector:@selector(_handelToPlayMusic) name:NC_TO_PLAY_MUSIC_NOTIFICATION object:nil];
+        [kNotificationCenter addObserver:self selector:@selector(_handelToPauseMusic) name:NC_TO_PAUSE_MUSIC_NOTIFICATION object:nil];
     }
     return self;
 }
@@ -75,7 +79,7 @@
         self.titleLabel.textAlignment = NSTextAlignmentCenter;
         self.titleLabel.font = [UIFont systemFontOfSize:16];
         self.titleLabel.textColor = [UIColor whiteColor];
-        self.titleLabel.text = @"飞机场的10:30";
+        self.titleLabel.text = @"歌曲名";
         self.titleLabel;
     })];
     
@@ -84,7 +88,7 @@
         self.singerNameLabel.textAlignment = NSTextAlignmentCenter;
         self.singerNameLabel.font = [UIFont boldSystemFontOfSize:15];
         self.singerNameLabel.textColor = NCColorGray(190);
-        self.singerNameLabel.text = @"陶喆";
+        self.singerNameLabel.text = @"歌手";
         self.singerNameLabel;
     })];
     
@@ -102,6 +106,12 @@
         self.progressView = [[NCMusicDetailProgressView alloc] initWithFrame:CGRectMake(0, self.controlView.frame.origin.y - 35, SCREEN_WIDTH, 35)];
         self.progressView;
     })];
+    
+    if (kPlayListManager.playListInfo) {
+        NCSongDetailInfo *songDetailInfo = kPlayListManager.playListInfo[kPlayListManager.index];
+        [self _refreshLabelWithTitle:songDetailInfo.name artists:songDetailInfo.artists];
+        [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
+    }
 }
 
 #pragma mark - Private Method
@@ -109,6 +119,31 @@
 - (void)_clickBackButton {
     [self.navigationController popViewControllerAnimated:YES];
 }
+
+
+// 刷新顶部的歌曲信息
+- (void)_refreshLabelWithTitle:(NSString *)title artists:(NSArray<NCArtistInfo *> *)artists {
+    self.titleLabel.text = title.copy;
+    NSMutableString *mutableString = [[NSMutableString alloc] init];
+
+    for (int i = 0; i < artists.count - 1; i++) {
+        [mutableString appendFormat:@"%@/", artists[i].name];
+    }
+    [mutableString appendString:artists[artists.count - 1].name];
+    self.singerNameLabel.text = mutableString.copy;
+}
+
+// 刷新图片
+- (void)_refreshBackgroundImageWithUrlString:(NSString *)urlString {
+    [NSObject cancelPreviousPerformRequestsWithTarget:self.backgroundImageView];
+
+    NSString *imageUrlString = [NSString stringWithFormat:@"%@?param=600y600", urlString];
+    [self.turntableView reloadImageWithUrlString:imageUrlString];
+    // 延迟刷新背景的图片
+    [self.backgroundImageView performSelector:@selector(reloadImageWithUrlString:) withObject:imageUrlString afterDelay:1.8];
+}
+
+#pragma mark Notification
 
 - (void)_handlePlayMusic:(NSNotification *)notification {
     NCSongDetailInfo *songDetailInfo = notification.object;
@@ -134,26 +169,15 @@
     [self _refreshBackgroundImageWithUrlString:songDetailInfo.album.picUrl];
 }
 
-// 刷新顶部的歌曲信息
-- (void)_refreshLabelWithTitle:(NSString *)title artists:(NSArray<NCArtistInfo *> *)artists {
-    self.titleLabel.text = title.copy;
-    NSMutableString *mutableString = [[NSMutableString alloc] init];
-
-    for (int i = 0; i < artists.count - 1; i++) {
-        [mutableString appendFormat:@"%@/", artists[i].name];
-    }
-    [mutableString appendString:artists[artists.count - 1].name];
-    self.singerNameLabel.text = mutableString.copy;
+- (void)_handelToPlayMusic {
+    [self.controlView refreshToPlay];
+    NSLog(@"");
 }
 
-// 刷新图片
-- (void)_refreshBackgroundImageWithUrlString:(NSString *)urlString {
-    [NSObject cancelPreviousPerformRequestsWithTarget:self.backgroundImageView];
-
-    NSString *imageUrlString = [NSString stringWithFormat:@"%@?param=600y600", urlString];
-    [self.turntableView reloadImageWithUrlString:imageUrlString];
-    // 延迟刷新背景的图片
-    [self.backgroundImageView performSelector:@selector(reloadImageWithUrlString:) withObject:imageUrlString afterDelay:1.8];
+- (void)_handelToPauseMusic {
+    [self.controlView refreshToPause];
+    NSLog(@"");
 }
+
 
 @end

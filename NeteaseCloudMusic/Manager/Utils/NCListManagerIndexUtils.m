@@ -9,7 +9,6 @@
 
 @interface NCListManagerIndexUtils ()
 
-@property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) NSArray<NSNumber *> *indexArray;
 
 @end
@@ -17,16 +16,15 @@
 @implementation NCListManagerIndexUtils
 
 #pragma - Public Method
-- (void)refreshRepeatWithSize:(NSInteger)size index:(NSInteger)realIndex {
+- (void)refreshRepeatWithSize:(NSInteger)size {
     NSMutableArray *mutableArray = @[].mutableCopy;
     for (int i = 0; i < size; i++) {
         mutableArray[i] = @(i);
     }
     self.indexArray = mutableArray.copy;
-    self.index = realIndex;
 }
 
-- (void)refreshShuffleWithSize:(NSInteger)size index:(NSInteger)realIndex {
+- (void)refreshShuffleWithSize:(NSInteger)size {
     NSMutableArray *mutableArray = @[].mutableCopy;
     for (int i = 0; i < size; i++) {
         mutableArray[i] = @(i);
@@ -38,21 +36,20 @@
         [mutableArray exchangeObjectAtIndex:i withObjectAtIndex:j];
     }
     self.indexArray = mutableArray.copy;
-    self.index = [self.indexArray indexOfObject:@(realIndex)];
 }
 
-- (NSInteger)previousIndex {
-    self.index = (self.index == 0) ? self.indexArray.count - 1 : self.index - 1;
-    return self.indexArray[self.index].integerValue;
+- (NSInteger)previousWithIndex:(NSInteger)realIndex {
+    NSInteger index = [self.indexArray indexOfObject:@(realIndex)];
+    index = (index == 0) ? self.indexArray.count - 1 : index - 1;
+    return self.indexArray[index].integerValue;
 }
 
-- (NSInteger)nextIndex {
-    self.index = (self.index + 1) % self.indexArray.count;
-    return self.indexArray[self.index].integerValue;
-}
-
-- (void)refreshIndex:(NSInteger)realIndex {
-    self.index = [self.indexArray indexOfObject:@(realIndex)];
+- (NSInteger)nextIndexWithIndex:(NSInteger)realIndex {
+    if (self.indexArray) {
+        NSInteger index = [self.indexArray indexOfObject:@(realIndex)];
+        index = (index + 1) % self.indexArray.count;
+    }
+    return 0;
 }
 
 @end
